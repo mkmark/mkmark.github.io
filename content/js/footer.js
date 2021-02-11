@@ -1,0 +1,1 @@
+showGuidance(),addLineNumbers(document),"true"==getCookie("privacy-notice-dismissed")||(document.getElementById("privacy-notice").style.display="block"),document.getElementById("privacy-notice-dismiss").addEventListener("click",function(){setCookie("privacy-notice-dismissed","true"),document.getElementById("privacy-notice").style.display="none",location.reload()});

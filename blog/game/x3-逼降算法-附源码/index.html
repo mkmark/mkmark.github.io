@@ -1,0 +1,243 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-175297541-1"></script><title>X3 逼降算法 附源码</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"><link rel="stylesheet" href="/content/css/styles.css?v=202102080807"><script src="/content/js/header.js?v=202102080708"></script><link rel="alternate" href="/atom.xml" title="Mark Ma's Blog" type="application/atom+xml"><link rel="alternate" href="/rss2.xml" title="Mark Ma's Blog" type="application/rss+xml"></head><body onclick=""><div class="sidebar" id="sidebar" onclick=""><div class="sidebar-item"><h1 style="margin-top:1.6em">Mark Ma&#39;s Blog</h1></div><nav class="sidebar-nav"><a class="sidebar-nav-item" href="/">About</a> <a class="sidebar-nav-item" href="/blog/">Blog</a> <a class="sidebar-nav-item" href="/archive/by-date/">- by Date</a> <a class="sidebar-nav-item" href="/archive/by-category/">- by Category</a> <a class="sidebar-nav-item" href="/archive/by-tag/">- by Tag</a> <a class="sidebar-nav-item" href="/portfolio/">Portfolio</a> <a class="sidebar-nav-item" href="/portfolio/graphic-design/">- Graphic Design</a> <a class="sidebar-nav-item" href="/portfolio/video-composition/">- Video Composition</a> <a class="sidebar-nav-item" href="/portfolio/web-design/">- Web Design</a><div class="sidebar-nav-item" onclick="switchColorMode()" style="cursor:pointer">Dark Mode</div></nav><div class="sidebar-item"><p><a href="/privacy-policy/" style="color:#888;font-size:.85em">Privacy Policy</a></p><p>&copy; 2017-2021. All rights reserved.</p></div></div><div class="markdown-body"><article id="post-md/2018-03-25-x3-逼降算法-附源码" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting"><div class="article-inner"><header class="article-header"><h1 class="p-name article-title" itemprop="headline name">X3 逼降算法 附源码</h1></header><p class="post-meta"><time class="dt-published" datetime="2018-03-25T09:08:00+08:00" itemprop="datePublished">2018-03-25</time></p><div class="e-content article-entry" itemprop="articleBody"><p><a target="_blank" rel="noopener" href="http://bbs.deeptimes.org/forum.php?mod=viewthread&tid=2148873&extra=">Original post on <em>deeptimes</em>. </a></p><p>翻译自<a href="https://forum.egosoft.com/viewtopic.php?p=2342693#2342693" target="_blank" rel="noopener">https://forum.egosoft.com/viewtopic.php?p=2342693#2342693</a>。<br>根据原贴，该作者根据某俄罗斯玩家的反编译成果从俄文翻译而来。<br>感谢Macaulish的提醒，已在该贴基础上根据源码做出诸多修正。LZ不是专业搞编程的，欢迎各位大佬指导。</p><a id="more"></a><p><strong>1.船壳小于87%才可能投降。</strong></p><p><strong>2.逼降检查点间隔时间以30s为初值，逐渐翻倍。</strong><br>如果每到检查点目标都恰好在被玩家攻击（即没有冗余时间），可能逼降成功的时间是0，30，60，120，240，480s......<br>当然目标不是时刻都在被攻击的，因此，检查点更有可能是0，35，65，133，253，493s......这种样子</p><p><strong>3.每过30s，逼降概率降低1%。</strong><br>结合第2条，战斗时间达到0，30，60，120，240，480s时，概率已经降低0%，1%, 2%, 4%, 8%, 16%。<br>这意味着第一次逼降是最有可能成功的</p><p><strong>4.在和上次逼降检查点间隔超过300s之后的新攻击行为，会导致逼降检查点重置</strong><br>300s基本意味着脱离战斗。</p><p><strong>5.初始逼降概率=30%-士气值%。</strong><br>野生的L士气值应该都是25。做任务可能刷出来比较低的。</p><p><strong>6.目标船壳剩余</strong><br>&lt;25%时，投降概率+1%<br>&lt;12%时，投降概率+2%<br>&lt;8%时，投降概率+3%<br>&lt;2%时，投降概率+10%<br>LZ捉Pirate Kestral的时候，目标士气值22。用5门Ion Shard Railgun一击把船壳降到0%，读档3次成功。</p><p><strong>7.如果玩家的实力（护盾+船壳+最大武器伤害）&lt;目标实力，投降概率降低5%。</strong></p><p><strong>8.如果目标是Khaak，概率值乘以“(玩家战斗等级 - 5) / 25”</strong><br>这意味着要捉到Khaak的船，玩家战斗等级必须达到6级。否则概率为0。<br>只有玩家战斗等级达到30级，逼降Khaak船的概率才和逼降普通船一样。</p><p><strong>9.概率算法:</strong><br>如果当前概率&gt;0到99的某一随机数，对方投降。</p><p><strong>10.如果使用Ion Disruptor来逼降，概率乘以0.04</strong><br>LZ很久以前试过。用ID烧Goner Ranger，烧到差不多40%船壳的时候才投降。要知道Goner Ranger的士气值都是很低的。</p><p>LZ一共读了大约10次档捉到了L交任务。每次只开一轮炮，不投降读档。<br>论坛里各位大佬根据经验总结的方法基本都是正确的，事实上我是捉到L以后才看到这个算法的。。</p><p>附ULiX反编译所得算法供大家研究。</p><pre class="language-c" data-language="c"><code class="language-c">TSHIP<span class="token punctuation">.</span><span class="token function">AttackedBy</span><span class="token punctuation">(</span>Attacker<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token comment">//arg2 - судя по контексту тип применяемого оружия</span>
+
+	TSCRIPT<span class="token punctuation">.</span><span class="token function">AttackedBy</span><span class="token punctuation">(</span>Attacker<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>Attacker<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		AttackerEv <span class="token operator">=</span> <span class="token function">SA_GetEventObject</span><span class="token punctuation">(</span>Attacker<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>AttackerEv <span class="token operator">&amp;&amp;</span> sh_Owner<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>arg2 <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>sh_Flags <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// если не использовано орудие</span>
+				TCLIENT<span class="token punctuation">.</span><span class="token function">NotifyCollisionWarn</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// угроза столкновения уровня 0</span>
+			<span class="token punctuation">&#125;</span> <span class="token comment">//L000BF866</span>
+
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ga_PlayerShip <span class="token operator">!=</span> AttackerEv<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>arg2<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token function">SA_GetFlag2</span><span class="token punctuation">(</span>arg2<span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0100</span>h<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+				<span class="token comment">//Если атакующий не корабль игрока, но использовано орудие, и орудие</span>
+				<span class="token comment">//способно на захват, то</span>
+				<span class="token comment">//при этом атакующим объектом становится корабль игрока, а атакующим - игрок, причем</span>
+				<span class="token comment">//только если он в активном секторе. Это условие необходимо для проверки орудий кокпитов.</span>
+				AttackerEv <span class="token operator">=</span> ga_PlayerShip<span class="token punctuation">;</span>
+				Attacker <span class="token operator">=</span> ga_PlayerShip<span class="token punctuation">.</span><span class="token function">GetObjectID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//функция вернёт нуль, если объект не в активном секторе</span>
+			<span class="token punctuation">&#125;</span> <span class="token comment">//L000BF8D4</span>
+
+			AttackerOwner <span class="token operator">=</span> AttackerEv<span class="token punctuation">.</span><span class="token function">GetOwner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// (loc2) Принадлежность атакующего</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">SE_IsClass</span><span class="token punctuation">(</span>AttackerEv<span class="token punctuation">,</span> <span class="token number">2004</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">//Атакующий объект является кораблем</span>
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>AttackerEv <span class="token operator">==</span> ga_PlayerShip<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>THIS<span class="token punctuation">.</span><span class="token function">IsEnemy</span><span class="token punctuation">(</span>AttackerEv<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+					<span class="token comment">//Атакующий объект корабль игрока или враг</span>
+					<span class="token comment">//L000BF922 -> L000BF934</span>
+
+					<span class="token keyword">if</span> <span class="token punctuation">(</span>AttackerOwner <span class="token operator">!=</span> sh_Owner<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+						<span class="token comment">// Атакующий и атакуемый не принадлежат одному владельцу</span>
+
+						<span class="token keyword">if</span> <span class="token operator">!</span><span class="token punctuation">(</span>arg2<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span><span class="token function">SA_GetGroup</span><span class="token punctuation">(</span>arg2<span class="token punctuation">)</span> <span class="token operator">==</span> AttackerOwner<span class="token punctuation">.</span><span class="token function">GetGroup</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+							<span class="token comment">//для атаки не использовано орудие или ......................</span>
+							<span class="token comment">//захват возможен только при данном</span>
+							<span class="token comment">//условии (SA_GetGroup(arg2) == AttackerOwner.GetGroup())</span>
+							<span class="token comment">//так как по следующему условию обязательно arg2 &lt;> 0</span>
+							<span class="token comment">//L000BF9A0</span>
+
+							<span class="token keyword">if</span> <span class="token punctuation">(</span>AttackerEv <span class="token operator">==</span> ga_PlayerShip<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> arg2 <span class="token punctuation">&#123;</span>
+								<span class="token comment">//Атакующий объект - карабль игрока и применяет орудие</span>
+								<span class="token comment">//L000BF9CA:</span>
+
+								<span class="token keyword">if</span> <span class="token operator">!</span><span class="token punctuation">(</span>TCLIENT<span class="token punctuation">.</span><span class="token function">GetClientState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0200</span>h<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+									<span class="token punctuation">(</span>sh_Owner <span class="token operator">&lt;</span><span class="token operator">></span> ga_Player<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>sh_Owner <span class="token operator">&lt;</span><span class="token operator">></span> ga_Races<span class="token punctuation">[</span><span class="token number">18</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// sh_Owner != Earth</span>
+									<span class="token comment">//сброшен 9 бит во флаге статистики игрока,</span>
+									<span class="token comment">//атакуемый не принадлежит игроку и землянам</span>
+
+									<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">SE_Random</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span><span class="token function">SA_GetType</span><span class="token punctuation">(</span>arg2<span class="token punctuation">)</span> <span class="token operator">&lt;</span><span class="token operator">></span> <span class="token number">17</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">//Ion Distructor</span>
+									<span class="token comment">//Вот интересный момент. Если пользуемся ID то основное</span>
+									<span class="token comment">//вычисления вероятности возможно с вероятностью 0.04.</span>
+									<span class="token comment">//Если пользоваться не ID, то лишняя случайность отсекается</span>
+									<span class="token comment">//Использование ID уменьшает общую вероятность захватить в 25 раз!!!</span>
+
+									<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">SA_GetShipTypeCockpitBody</span><span class="token punctuation">(</span>sh_SubType<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token punctuation">(</span>sh_Flags <span class="token operator">&amp;</span> <span class="token number">0100</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+											<span class="token comment">//если есть кабина и разрешен захват данного корабля</span>
+
+											Shield <span class="token operator">=</span> <span class="token function">SA_GetShield</span><span class="token punctuation">(</span>sh_ObjectID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+											LimShield <span class="token operator">=</span> <span class="token function">SA_GetMaxShield</span><span class="token punctuation">(</span>sh_ObjectID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+											Hull <span class="token operator">=</span> <span class="token function">SA_GetHul</span><span class="token punctuation">(</span>sh_ObjectID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+											MaxHull <span class="token operator">=</span> <span class="token function">SA_GetMaxHull</span><span class="token punctuation">(</span>sh_ObjectID<span class="token punctuation">)</span><span class="token punctuation">;</span>
+											LimShield <span class="token operator">=</span> LimShield <span class="token operator">/</span> <span class="token number">100</span> <span class="token comment">// LimShield = MaxShield / 100</span>
+											<span class="token keyword">if</span> <span class="token punctuation">(</span>LimShild <span class="token operator">></span> <span class="token number">1000</span><span class="token punctuation">)</span> LimShild <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+											<span class="token comment">//Минимальное значение щита, при котором</span>
+											<span class="token comment">//будет проверяться вероятность капитулирования</span>
+											<span class="token comment">// 1% от максимума, или 1000, если 1% превышает 1000 единиц.</span>
+
+											<span class="token keyword">if</span> <span class="token punctuation">(</span>Shield <span class="token operator">&lt;=</span> LimShield<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>Hull <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>Hull <span class="token operator">&lt;</span> <span class="token function">SE_Random</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token operator">*</span> MaxHull <span class="token operator">/</span> <span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">//Щиты меньше лимитного, а корпус поврежден и лежит в интервале от //нуля до переменного случайного значения MaxHull * i/8, //где i - целое в интервале от 0 до 7 //Максимальная целостность корпуса, при которой возможен захват 87% if (ga_Player.GetAge() > sh_NextTakeoverChanceTime) &#123;</span>
+												<span class="token comment">//Время игры превышает время, когда даётся шанс на захват</span>
+
+												<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>sh_TakeoverDelayTime <span class="token operator">></span> <span class="token number">300</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+												<span class="token punctuation">(</span>ga_Player<span class="token punctuation">.</span><span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token punctuation">(</span>sh_NextTakeoverChanceTime <span class="token operator">+</span> sh_TakeoverDelayTime<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+												<span class="token comment">//Задержка между шансами захватить больше 300 секунд, и</span>
+												<span class="token comment">//время игры больше времени следующего шанса + задержка между шансами</span>
+
+												sh_TakeoverDelayTime <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span> <span class="token comment">//Установить задержку в 30 секунд</span>
+												<span class="token comment">// -> L000BFBFC</span>
+											<span class="token punctuation">&#125;</span> <span class="token comment">//L000BFBD6 -> L000BFBEC</span>
+											<span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+												sh_TakeoverDelayTime <span class="token operator">+=</span> sh_TakeoverDelayTime<span class="token punctuation">;</span> <span class="token comment">//иначе, удвоить задержку</span>
+											<span class="token punctuation">&#125;</span>
+											<span class="token comment">//L000BFBFC:</span>
+											sh_NextTakeoverChanceTime <span class="token operator">=</span> ga_Player<span class="token punctuation">.</span><span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> sh_TakeoverDelayTime<span class="token punctuation">;</span>
+											                            <span class="token comment">//установить время следующего шанса захватить кораблик</span>
+
+											                            ProbabilityCapture <span class="token operator">=</span> <span class="token number">30</span> <span class="token operator">-</span> this<span class="token punctuation">.</span><span class="token function">GetPilotMorale</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+											                            <span class="token comment">//установить начальную вероятность захвата в 30% минус уровень марали атакуемого</span>
+											                            <span class="token comment">// т.е. от 20 до 30%</span>
+
+											<span class="token keyword">if</span> <span class="token punctuation">(</span>AttackerEv<span class="token punctuation">.</span><span class="token function">GetStrength</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> this<span class="token punctuation">.</span><span class="token function">GetStrength</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+												<span class="token comment">//если сила атакующего меньше силы атакуемого</span>
+
+												ProbabilityCapture <span class="token operator">-=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+												<span class="token comment">//уменьшить вероятность прыжка на 5%</span>
+												<span class="token comment">//сила находится как сумма Shileld + Hull + MaxLaserDamage</span>
+											<span class="token punctuation">&#125;</span>
+
+											<span class="token keyword">if</span> <span class="token punctuation">(</span>Hull <span class="token operator">&lt;</span><span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+												<span class="token comment">//Если корпус не равен нулю</span>
+
+												ProbabilityAdd <span class="token operator">=</span> MaxHull <span class="token operator">/</span> <span class="token punctuation">(</span>Hull <span class="token operator">*</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+													<span class="token keyword">if</span> <span class="token punctuation">(</span>ProbabilityOnHull <span class="token operator">></span> <span class="token number">10</span><span class="token punctuation">)</span> ProbabilityOnHull <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+													ProbabilityCapture <span class="token operator">+=</span> ProbabilityAdd<span class="token punctuation">;</span>
+													<span class="token comment">//Добавочная вероятность, по побитому корпусу</span>
+													<span class="token comment">//1% при целостности меньше 25%</span>
+													<span class="token comment">//2% - меньше 12%</span>
+													<span class="token comment">//3% - меньше 8%</span>
+													<span class="token comment">//10% - меньше 2%</span>
+													<span class="token comment">// Не стоящий учета параметр, главное, чтоб корпус был поврежден до</span>
+													<span class="token comment">// состояния 87%, когда вообще появляется шанс захватить</span>
+												<span class="token punctuation">&#125;</span> <span class="token comment">//L000BFC94</span>
+
+												ProbabilityCapture <span class="token operator">-=</span> sh_TakeoverDelayTime <span class="token operator">/</span> <span class="token number">30</span><span class="token punctuation">;</span>
+												                      <span class="token comment">//Уменьшение вероятности в зависимости от интервала ожидания между</span>
+												                      <span class="token comment">//шансами захватить</span>
+												                      <span class="token comment">//Возможные значения 1%, 2%, 4%, 8%, 16%, для 30, 60, 120, 240, 480 секунд задержки</span>
+												                      <span class="token comment">//Что объясняет больший шанс захватить сразу, нежели спустя некоторое время</span>
+
+												<span class="token keyword">if</span> <span class="token punctuation">(</span>sh_Owner <span class="token operator">==</span> ga_Races<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+												<span class="token comment">//Раса корабля хаак. Расчет вероятности захвата хааков</span>
+												<span class="token comment">//зависит от текущего боевого рейтинга.</span>
+												<span class="token comment">//до 6 уровня захват хааков невозможен, и только на 30 уровне</span>
+												<span class="token comment">//их можно захватывать наравне с другими кораблями</span>
+												<span class="token comment">//Множитель (FightRank - 5) / 25</span>
+
+												ProbabilityAdd <span class="token operator">=</span> <span class="token function">GetTitleFromFightRanking</span><span class="token punctuation">(</span>ga_Player<span class="token punctuation">.</span><span class="token function">GetFightRanking</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+													ProbabilityCapture <span class="token operator">*=</span> <span class="token punctuation">(</span>ProbabilityAdd <span class="token operator">-</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">25</span><span class="token punctuation">;</span>
+
+													<span class="token keyword">if</span> <span class="token punctuation">(</span>ProbabilityCapture <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> ProbabilityCapture <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//если получилось меньше нуля, приравнять к нулю &#125;//L000BFD06 // if (ProbabilityCapture > SE_Random(100)&#123;</span>
+													<span class="token comment">//Ну и, наконец, если текущая вероятность больше случайного числа от 0 до 99</span>
+													<span class="token comment">//начинаем процесс захвата</span>
+
+													try <span class="token punctuation">&#123;</span>
+														<span class="token keyword">if</span> <span class="token punctuation">(</span>sh_Owner <span class="token operator">&lt;</span><span class="token operator">></span> ga_Races<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token comment">//Если шип не принадлежит расе хааков и</span>
+															<span class="token punctuation">(</span>sh_Owner <span class="token operator">&lt;</span><span class="token operator">></span> ga_Races<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">//и расе ксенонов,</span>
+															this<span class="token punctuation">.</span><span class="token function">SendMessageSync</span><span class="token punctuation">(</span><span class="token number">28</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//то произнести фразу о сдаче корабля</span>
+														<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token keyword">goto</span> L000BFDBA<span class="token punctuation">;</span>
+
+														<span class="token comment">//К чему этот блок, я так и не понял, всё равно он пропущен, да и не могут эти расы кричать</span>
+														<span class="token comment">//Другого варианта структуры, кроме как безусловный переход, чтобы была</span>
+														<span class="token comment">// возможность не выполнить данный блок, я не нашёл, а он действительно не выполняется.</span>
+
+														<span class="token keyword">if</span> <span class="token punctuation">(</span>sh_Owner <span class="token operator">==</span> ga_Races<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token comment">//Если шип не принадлежит расе хааков и</span>
+															<span class="token punctuation">(</span>sh_Owner <span class="token operator">==</span> ga_Races<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">//и расе ксенонов,</span>
+															this<span class="token punctuation">.</span><span class="token function">SendMessageSync</span><span class="token punctuation">(</span><span class="token number">28</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//то произнести фразу о сдаче корабля</span>
+														<span class="token punctuation">&#125;</span>
+														L000BFDBA<span class="token operator">:</span>
+														ga_Player<span class="token punctuation">.</span><span class="token function">IncStatCounter</span><span class="token punctuation">(</span><span class="token number">5080</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Увеличить число в статистике</span>
+
+														this<span class="token punctuation">.</span><span class="token function">GetOwner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ChangeNotorietyKill</span><span class="token punctuation">(</span>this<span class="token punctuation">,</span> AttackerEv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+														<span class="token comment">//</span>
+														<span class="token comment">// Здесь мог ошибиться, привожу исходный код.</span>
+														<span class="token comment">//</span>
+														<span class="token comment">// push SP[6] ; loc1 ; // AttackerEv</span>
+														<span class="token comment">// get_object</span>
+														<span class="token comment">// push 2 //число аргументов для ChangeNotorietyKill</span>
+														<span class="token comment">// push 0 //число аргументов для GetOwner</span>
+														<span class="token comment">// get_object</span>
+														<span class="token comment">// call GetOwner ; 00000843 ; // GetOwner()</span>
+														<span class="token comment">// call ChangeNotorietyKill ; //ChangeNotorietyKill(arg1,arg2)</span>
+														<span class="token comment">//</span>
+														this<span class="token punctuation">.</span><span class="token function">SetRaceLogicControl</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+														this<span class="token punctuation">.</span><span class="token function">LeaveShip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//покидаем кораблик</span>
+													<span class="token punctuation">&#125;</span> <span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+												<span class="token punctuation">&#125;</span> <span class="token comment">//L000BFE0C</span>
+											<span class="token punctuation">&#125;</span>
+										<span class="token punctuation">&#125;</span>
+									<span class="token punctuation">&#125;</span>
+								<span class="token punctuation">&#125;</span>
+							<span class="token punctuation">&#125;</span>
+						<span class="token punctuation">&#125;</span>
+						<span class="token comment">//&lt;L000BFE14></span>
+						<span class="token comment">//Далее процесс расчета повреждений,</span>
+						<span class="token comment">//который меня не сильно интересует</span>
+						<span class="token comment">//</span>
+						<span class="token keyword">if</span> <span class="token punctuation">(</span>arg2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+							MaxLaser <span class="token operator">=</span> AttakerEv<span class="token punctuation">.</span><span class="token function">GetMaxLaser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">;</span>
+							this<span class="token punctuation">.</span><span class="token function">MakeDamage</span><span class="token punctuation">(</span><span class="token function">SE_Random</span><span class="token punctuation">(</span>MaxLaser<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+							<span class="token comment">//Оружие наносит повреждения от 10 до 110% своей максимальной мощности</span>
+
+						<span class="token punctuation">&#125;</span> <span class="token comment">//L000BFE50</span>
+
+						<span class="token keyword">if</span> <span class="token punctuation">(</span>AttackerOwner <span class="token operator">==</span> ga_Player<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>AttackerEv <span class="token operator">&lt;</span><span class="token operator">></span> ga_PlayerShip<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+							<span class="token punctuation">(</span>AttackerEv <span class="token operator">&lt;</span><span class="token operator">></span> sh_Attacker<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+							<span class="token comment">//Атакующий принадлежит игроку, не является кораблем, пилотируемым игроком</span>
+							<span class="token comment">//и не является предыдущим атакующим</span>
+
+							<span class="token keyword">if</span> <span class="token punctuation">(</span>ga_Player<span class="token punctuation">.</span><span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">></span> ga_Player<span class="token punctuation">.</span><span class="token function">GetLastNotorietyHitTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">60</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+								<span class="token comment">//От последнего попадания прошло больше минуты</span>
+
+								sh_Owner<span class="token punctuation">.</span><span class="token function">AddNotoriety</span><span class="token punctuation">(</span>ga_Player<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+								ga_Player<span class="token punctuation">.</span><span class="token function">SetLastNotorietyHitTime</span><span class="token punctuation">(</span>ga_Player<span class="token punctuation">.</span><span class="token function">GetAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+								<span class="token comment">//За каждую минуту атаки известность у определённой расы будет падать на 1 единицу</span>
+							<span class="token punctuation">&#125;</span>
+						<span class="token punctuation">&#125;</span> <span class="token comment">//L000BFE78 -> L000BFE98 -> L000BFEF6</span>
+
+						ShipAttacker <span class="token operator">=</span> sh_Attacker<span class="token punctuation">;</span> <span class="token comment">//loc3</span>
+						LastTimeAttacked <span class="token operator">=</span> sh_LastTime_Attacked<span class="token punctuation">;</span> <span class="token comment">//loc4</span>
+						AutopilotOn <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">//loc5</span>
+						<span class="token keyword">if</span> <span class="token punctuation">(</span>sh_Flags <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+							<span class="token keyword">if</span><span class="token punctuation">(</span>arg2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+								this<span class="token punctuation">.</span><span class="token function">SetAttacker</span><span class="token punctuation">(</span>AttackerEv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+								loc5 <span class="token operator">=</span> this<span class="token punctuation">.</span><span class="token function">IsAutopilotActive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+							<span class="token punctuation">&#125;</span> <span class="token comment">//L000BFF3E</span>
+							<span class="token keyword">else</span> AutopilotOn <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//loc5</span>
+						<span class="token punctuation">&#125;</span> <span class="token comment">//L000BFF4C</span>
+						<span class="token keyword">else</span> this<span class="token punctuation">.</span><span class="token function">AttackedByHandler</span><span class="token punctuation">(</span>Attacker<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+						this<span class="token punctuation">.</span><span class="token function">GetAttacker</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Непонятный вызов процедуры, значение всё равно не сохраняется</span>
+						<span class="token comment">//</span>
+						<span class="token comment">//L000BFF60: push 0 //число аргументов для GetAttacker</span>
+						<span class="token comment">// get_object //this</span>
+						<span class="token comment">// call GetAttacker ; 00003A50</span>
+						<span class="token comment">// pop //теряем результат вызова функции</span>
+						<span class="token comment">// push SP[0] ; loc5</span>
+						<span class="token comment">//</span>
+						<span class="token keyword">if</span> <span class="token punctuation">(</span>AutopilotOn <span class="token operator">&amp;&amp;</span> sh_Attacker<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+							<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>sh_LastTime_Attacked <span class="token operator">-</span> LastTimeAttacked<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+								loc6 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+								<span class="token keyword">if</span> <span class="token punctuation">(</span>this<span class="token punctuation">.</span><span class="token function">IsLanding</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> sh_CollisionIgnoreObj<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+									<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">SA_FindObject</span><span class="token punctuation">(</span>sh_CollisionIgnoreObj<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+										<span class="token keyword">if</span> <span class="token operator">!</span><span class="token punctuation">(</span><span class="token function">SE_IsClass</span><span class="token punctuation">(</span>sh_Attacker<span class="token punctuation">,</span> <span class="token number">2014</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">//Attacker Is Not Gate</span>
+											<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">SA_GetMainType</span><span class="token punctuation">(</span>sh_CollisionIgnoreObj<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">18</span><span class="token punctuation">)</span> loc6 <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment">//SSTYPE_SHIP секторальный шип</span>
+											<span class="token keyword">else</span> loc6 <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+										<span class="token punctuation">&#125;</span> <span class="token comment">//L000C0022 -> L000C0056</span>
+									<span class="token punctuation">&#125;</span> <span class="token comment">//L000BFFFA -> L000C0022 -> L000C0056</span>
+								<span class="token punctuation">&#125;</span> <span class="token comment">//L000BFFD8 -> L000BFFFA -> L000C0022 -> L000C0056</span>
+								<span class="token comment">//L000C0056:</span>
+								this<span class="token punctuation">.</span><span class="token function">Signal_Attacked</span><span class="token punctuation">(</span>sh_Attacker<span class="token punctuation">,</span> loc6<span class="token punctuation">)</span>
+							<span class="token punctuation">&#125;</span><span class="token comment">//L000BFFAC -> L000C006E</span>
+						<span class="token punctuation">&#125;</span><span class="token comment">//L000BFF88 -> L000C006E</span>
+						<span class="token keyword">if</span> <span class="token operator">!</span><span class="token punctuation">(</span>sh_Flags <span class="token operator">&amp;</span> <span class="token number">01</span>h<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>sh_Owner <span class="token operator">==</span> ga_Player<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span>
+							<span class="token operator">!</span><span class="token punctuation">(</span><span class="token function">SE_IsClass</span><span class="token punctuation">(</span>this<span class="token punctuation">,</span> <span class="token number">2067</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">//ship is class TFIGHTDRONE</span>
+							TCLIENT<span class="token punctuation">.</span><span class="token function">NotifyAttacked</span><span class="token punctuation">(</span>this<span class="token punctuation">)</span><span class="token punctuation">;</span>
+						<span class="token punctuation">&#125;</span><span class="token comment">//L000C00B8</span>
+					<span class="token punctuation">&#125;</span> <span class="token comment">//L000BF990 -> L000BF99E -> L000C00BC</span>
+				<span class="token punctuation">&#125;</span> <span class="token comment">//L000BF952 -> L000BF99E -> L000C00BC</span>
+			<span class="token punctuation">&#125;</span> <span class="token comment">//L000BF924 -> L000BF932 -> L000BF952 -> L000BF99E -> L000C00BC</span>
+		<span class="token punctuation">&#125;</span> <span class="token comment">//L000BF932 -> L000BF952 -> L000BF99E -> L000C00BC</span>
+	<span class="token punctuation">&#125;</span> <span class="token comment">//L000C00C0</span>
+<span class="token punctuation">&#125;</span> <span class="token comment">//L000C00C4</span>
+<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code></pre><p></p></div></div></article></div><div id="privacy-notice"><div id="privacy-notice-content" class="markdown-body"><div><a id="privacy-notice-dismiss" class="btn"><svg width="18" height="18" viewBox="0 0 18 18" style="fill:currentColor;vertical-align:baseline;margin-top:-.3em;margin-bottom:-.3em"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9 15 4.41z"/></svg></a></div><div>Hover your mouse or tap on the left edge to navigate.<br>Upon dismissing, you acknowledge that you have read and understand our <a href="/privacy-policy/">Privacy Policy</a>.</div></div></div></body><footer><script src="/content/js/footer.js?v=202102080708"></script></footer></html>

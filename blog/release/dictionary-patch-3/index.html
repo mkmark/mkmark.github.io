@@ -1,0 +1,107 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-175297541-1"></script><title>Dictionary Patch 3</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"><link rel="stylesheet" href="/content/css/styles.css?v=202102080807"><script src="/content/js/header.js?v=202102080708"></script><link rel="alternate" href="/atom.xml" title="Mark Ma's Blog" type="application/atom+xml"><link rel="alternate" href="/rss2.xml" title="Mark Ma's Blog" type="application/rss+xml"></head><body onclick=""><div class="sidebar" id="sidebar" onclick=""><div class="sidebar-item"><h1 style="margin-top:1.6em">Mark Ma&#39;s Blog</h1></div><nav class="sidebar-nav"><a class="sidebar-nav-item" href="/">About</a> <a class="sidebar-nav-item" href="/blog/">Blog</a> <a class="sidebar-nav-item" href="/archive/by-date/">- by Date</a> <a class="sidebar-nav-item" href="/archive/by-category/">- by Category</a> <a class="sidebar-nav-item" href="/archive/by-tag/">- by Tag</a> <a class="sidebar-nav-item" href="/portfolio/">Portfolio</a> <a class="sidebar-nav-item" href="/portfolio/graphic-design/">- Graphic Design</a> <a class="sidebar-nav-item" href="/portfolio/video-composition/">- Video Composition</a> <a class="sidebar-nav-item" href="/portfolio/web-design/">- Web Design</a><div class="sidebar-nav-item" onclick="switchColorMode()" style="cursor:pointer">Dark Mode</div></nav><div class="sidebar-item"><p><a href="/privacy-policy/" style="color:#888;font-size:.85em">Privacy Policy</a></p><p>&copy; 2017-2021. All rights reserved.</p></div></div><div class="markdown-body"><article id="post-md/2018-07-15-dictionary-patch-3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting"><div class="article-inner"><header class="article-header"><h1 class="p-name article-title" itemprop="headline name">Dictionary Patch 3</h1></header><p class="post-meta"><time class="dt-published" datetime="2018-07-15T18:26:00+08:00" itemprop="datePublished">2018-07-15</time></p><div class="e-content article-entry" itemprop="articleBody"><h3 id="Goal">Goal</h3><p>With Chrome extension, user-defined protocol and Windows API integrated in C#, the auto-look-up process when reviewing words on Shanbay can be even more cost-efficient and precise comparing with former methods.</p><a id="more"></a><style type="text/css">ul{list-style:none;margin-left:0}</style><ul><li>[x] Find a good Dictionary<ul><li>[x] Modify for better user experience</li></ul></li><li>[x] FInd a good Dictionary Software<ul><li>[x] Modify for better user experience</li><li>[x] FInd a even better Dictionary Software and modify it for good</li></ul></li><li>[x] Integrate with Shanbay<ul><li>[x] Basic intergration by simulating user activity</li><li>[x] <strong>Advanced intergration by combining webpage with local software</strong><ul><li>[x] <strong>Triggered by user activity</strong><ul><li>[ ] Triggered by page content update</li></ul></li></ul></li></ul></li></ul><h3 id="Chrome-Extension">Chrome Extension</h3><h4 id="manifest-json">manifest.json</h4><pre class="language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"GoldenDictForShanbay"</span><span class="token punctuation">,</span>
+    <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"0.9"</span><span class="token punctuation">,</span>
+    <span class="token property">"manifest_version"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"GoldenDictForShanbay"</span><span class="token punctuation">,</span>
+    <span class="token property">"icons"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span><span class="token property">"16"</span><span class="token operator">:</span><span class="token string">"16.png"</span><span class="token punctuation">,</span><span class="token property">"48"</span><span class="token operator">:</span><span class="token string">"48.png"</span><span class="token punctuation">,</span><span class="token property">"128"</span><span class="token operator">:</span><span class="token string">"128.png"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token property">"permissions"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">"https://www.shanbay.com/bdc/review/"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"browser_action"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+        <span class="token property">"default_icon"</span><span class="token operator">:</span> <span class="token string">"16.png"</span> 
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> 
+    <span class="token property">"content_scripts"</span><span class="token operator">:</span><span class="token punctuation">[</span> 
+        <span class="token punctuation">&#123;</span> 
+            <span class="token property">"matches"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"https://www.shanbay.com/bdc/review/"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            <span class="token property">"js"</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">"main.js"</span><span class="token punctuation">]</span> 
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span> 
+<span class="token punctuation">&#125;</span></code></pre><h4 id="main-js">main.js</h4><pre class="language-javascript" data-language="javascript"><code class="language-javascript">document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"keydown"</span><span class="token punctuation">,</span>callmain<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> formerword <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> word <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    
+<span class="token keyword">function</span> <span class="token function">callmain</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"keydown"</span><span class="token punctuation">,</span>callmain<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> formerword <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> word <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    
+<span class="token keyword">function</span> <span class="token function">callmain</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>
+        event<span class="token punctuation">.</span>keyCode <span class="token operator">==</span> <span class="token number">32</span>  <span class="token comment">//space</span>
+        <span class="token operator">||</span> event<span class="token punctuation">.</span>keyCode <span class="token operator">==</span> <span class="token number">49</span> <span class="token comment">//main 1</span>
+        <span class="token operator">||</span> event<span class="token punctuation">.</span>keyCode <span class="token operator">==</span> <span class="token number">50</span> <span class="token comment">//main 2</span>
+        <span class="token operator">||</span> event<span class="token punctuation">.</span>keyCode <span class="token operator">==</span> <span class="token number">68</span> <span class="token comment">//d</span>
+        <span class="token operator">||</span> event<span class="token punctuation">.</span>keyCode <span class="token operator">==</span> <span class="token number">97</span> <span class="token comment">//numpad 1</span>
+        <span class="token operator">||</span> event<span class="token punctuation">.</span>keyCode <span class="token operator">==</span> <span class="token number">98</span> <span class="token comment">//numpad 2</span>
+    <span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span>main<span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    word <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"h1"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>innerHTML
+    <span class="token keyword">if</span><span class="token punctuation">(</span>formerword <span class="token operator">!=</span> word<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href<span class="token operator">=</span><span class="token string">"GoldenDict://"</span><span class="token operator">+</span>word<span class="token punctuation">;</span>
+        formerword <span class="token operator">=</span> word<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span> 
+<span class="token punctuation">&#125;</span></code></pre><h3 id="User-defined-Protocol">User-defined Protocol</h3><pre class="language-PowerShell" data-language="PowerShell"><code class="language-PowerShell">Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\GoldenDict]
+&quot;URL Protocol&quot;&#x3D;&quot;D:\\Users\\Mark\\Documents\\Mark\\Data\\Dictionary\\GoldenDict\\protocol\\GoldendictProtocol.exe&quot;
+@&#x3D;&quot;protocol.exe&quot;
+
+[HKEY_CLASSES_ROOT\GoldenDict\DefaultIcon]
+@&#x3D;&quot;D:\\Users\\Mark\\Documents\\Mark\\Data\\Dictionary\\GoldenDict\\protocol\\GoldendictProtocol.exe,1&quot;
+
+[HKEY_CLASSES_ROOT\GoldenDict\shell]
+
+[HKEY_CLASSES_ROOT\GoldenDict\shell\open]
+
+[HKEY_CLASSES_ROOT\GoldenDict\shell\open\command]
+@&#x3D;&quot;\&quot;D:\\Users\\Mark\\Documents\\Mark\\Data\\Dictionary\\GoldenDict\\protocol\\GoldendictProtocol.exe\&quot; \&quot;%1\&quot;&quot;
+</code></pre><h3>C#</h3><pre><code class="language-csharp line-numbers">using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+<p>namespace GoldendictProtocol<br>
+&#123;<br>
+class Program<br>
+&#123;<br>
+static void Main(string[] args)<br>
+&#123;<br>
+IntPtr hWnd = GetForegroundWindow();</p>
+<pre><code>        if (args.Length &gt; 0)
+        &#123;
+            args[0] = args[0].Remove(0, 13);
+            args[0] = args[0].Replace(&quot;%20&quot;, &quot; &quot;);
+            System.Diagnostics.Process.Start(&quot;D:\\Users\\Mark\\Documents\\Mark\\Data\\Dictionary\\GoldenDict\\GoldenDict.exe&quot;, &quot;\&quot;&quot; + args[0] + &quot;\&quot;&quot;);
+        &#125;
+        System.DateTime beforDT = System.DateTime.Now;
+        System.DateTime afterDT = new System.DateTime();
+        do
+        &#123;
+            if (hWnd == GetForegroundWindow())
+            &#123;
+                afterDT = System.DateTime.Now;
+                System.Threading.Thread.Sleep(1);
+                continue;
+            &#125;
+            else
+            &#123;
+                break;
+            &#125;
+        &#125; while (afterDT.Subtract(beforDT).TotalMilliseconds &lt; 200);
+        SetForegroundWindow(hWnd);
+    &#125;
+
+    [DllImport(&quot;user32.dll&quot;, EntryPoint = &quot;GetForegroundWindow&quot;)]
+    public static extern IntPtr GetForegroundWindow();
+    [DllImport(&quot;user32.dll&quot;, EntryPoint = &quot;SetForegroundWindow&quot;)]
+    public static extern int SetForegroundWindow(IntPtr hwnd);
+&#125;
+</code></pre>
+<p>}<br>
+</p></code></pre><p></p></div></div></article></div><div id="privacy-notice"><div id="privacy-notice-content" class="markdown-body"><div><a id="privacy-notice-dismiss" class="btn"><svg width="18" height="18" viewBox="0 0 18 18" style="fill:currentColor;vertical-align:baseline;margin-top:-.3em;margin-bottom:-.3em"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9 15 4.41z"/></svg></a></div><div>Hover your mouse or tap on the left edge to navigate.<br>Upon dismissing, you acknowledge that you have read and understand our <a href="/privacy-policy/">Privacy Policy</a>.</div></div></div></body><footer><script src="/content/js/footer.js?v=202102080708"></script></footer></html>

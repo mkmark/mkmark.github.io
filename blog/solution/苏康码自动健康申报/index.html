@@ -14,6 +14,7 @@
 <span class="token keyword">import</span> os
 
 <span class="token keyword">import</span> atexit
+
 <span class="token comment"># %% logger</span>
 logger <span class="token operator">=</span> logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span><span class="token punctuation">)</span>
 logger<span class="token punctuation">.</span>setLevel<span class="token punctuation">(</span>logging<span class="token punctuation">.</span>DEBUG<span class="token punctuation">)</span>
@@ -32,20 +33,11 @@ handler_string<span class="token punctuation">.</span>setFormatter<span class="t
 logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>handler_console<span class="token punctuation">)</span>
 logger<span class="token punctuation">.</span>addHandler<span class="token punctuation">(</span>handler_string<span class="token punctuation">)</span>
 
-<span class="token keyword">def</span> <span class="token function">exit_handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment"># telegram_bot</span>
-    telegram_bot <span class="token operator">=</span> Telegram_bot<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    token <span class="token operator">=</span> <span class="token string">'&#123;&#123;telegram_token&#125;&#125;'</span>
-    chat_id <span class="token operator">=</span> <span class="token string">'&#123;&#123;telegram_chat_id&#125;&#125;'</span>
-    telegram_bot<span class="token punctuation">.</span>ping<span class="token punctuation">(</span>token<span class="token punctuation">,</span> chat_id<span class="token punctuation">,</span> log_stringIO<span class="token punctuation">.</span>getvalue<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-atexit<span class="token punctuation">.</span>register<span class="token punctuation">(</span>exit_handler<span class="token punctuation">)</span>
-
 <span class="token comment"># %% jsstm</span>
 <span class="token keyword">class</span> <span class="token class-name">Jsstm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 
-    session <span class="token operator">=</span> requests<span class="token punctuation">.</span>session<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>session <span class="token operator">=</span> requests<span class="token punctuation">.</span>session<span class="token punctuation">(</span><span class="token punctuation">)</span>
         <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token string">'jsstm_cookie'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
             <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'jsstm_cookie'</span><span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
                 self<span class="token punctuation">.</span>session<span class="token punctuation">.</span>cookies<span class="token punctuation">.</span>update<span class="token punctuation">(</span>pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -82,8 +74,6 @@ atexit<span class="token punctuation">.</span>register<span class="token punctua
         job <span class="token operator">=</span> <span class="token string">'userAuth'</span>
         url <span class="token operator">=</span> <span class="token string">'https://jsstm.jszwfw.gov.cn/jkm/userAuth'</span>
         response <span class="token operator">=</span> self<span class="token punctuation">.</span>http_post<span class="token punctuation">(</span>job<span class="token punctuation">,</span> url<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
-        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'jsstm_cookie'</span><span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
-            pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>self<span class="token punctuation">.</span>session<span class="token punctuation">.</span>cookies<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
         <span class="token keyword">return</span><span class="token punctuation">(</span>response<span class="token punctuation">)</span>
 
     <span class="token keyword">def</span> <span class="token function">get_urlabc</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -108,7 +98,7 @@ atexit<span class="token punctuation">.</span>register<span class="token punctua
         utcp8 <span class="token operator">=</span> utc<span class="token punctuation">.</span>astimezone<span class="token punctuation">(</span>to_zone<span class="token punctuation">)</span>
         utcp8_str <span class="token operator">=</span> utcp8<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">'%Y-%m-%d %H:%M:%S'</span><span class="token punctuation">)</span>
 
-        logger<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token string">'last attendance %s'</span><span class="token punctuation">,</span> utcp8_str<span class="token punctuation">)</span>
+        logger<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token string">'last attendance: %s'</span><span class="token punctuation">,</span> utcp8_str<span class="token punctuation">)</span>
         <span class="token keyword">return</span><span class="token punctuation">(</span>utcp8_str<span class="token punctuation">)</span>
 
     <span class="token keyword">def</span> <span class="token function">saveDailyAttendence</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -126,6 +116,15 @@ atexit<span class="token punctuation">.</span>register<span class="token punctua
         requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> proxies<span class="token operator">=</span>self<span class="token punctuation">.</span>proxies<span class="token punctuation">)</span>
 
 <span class="token comment"># %%</span>
+<span class="token keyword">def</span> <span class="token function">exit_handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># telegram_bot</span>
+    telegram_bot <span class="token operator">=</span> Telegram_bot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    token <span class="token operator">=</span> <span class="token string">'&#123;&#123;telegram_token&#125;&#125;'</span>
+    chat_id <span class="token operator">=</span> <span class="token string">'&#123;&#123;telegram_chat_id&#125;&#125;'</span>
+    telegram_bot<span class="token punctuation">.</span>ping<span class="token punctuation">(</span>token<span class="token punctuation">,</span> chat_id<span class="token punctuation">,</span> log_stringIO<span class="token punctuation">.</span>getvalue<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+atexit<span class="token punctuation">.</span>register<span class="token punctuation">(</span>exit_handler<span class="token punctuation">)</span>
+
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     jsstm <span class="token operator">=</span> Jsstm<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
@@ -142,4 +141,8 @@ atexit<span class="token punctuation">.</span>register<span class="token punctua
     data_queryAttendanceList <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'userId=&#123;&#123;身份证&#125;&#125;&amp;abc='</span> <span class="token operator">+</span> urlabc<span class="token punctuation">)</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
     response <span class="token operator">=</span> jsstm<span class="token punctuation">.</span>queryAttendanceList<span class="token punctuation">(</span>data_queryAttendanceList<span class="token punctuation">)</span>
     utcp8_str <span class="token operator">=</span> jsstm<span class="token punctuation">.</span>get_last_attendance<span class="token punctuation">(</span>response<span class="token punctuation">)</span>
+
+    <span class="token comment"># save cookie across sessions</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'jsstm_cookie'</span><span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>jsstm<span class="token punctuation">.</span>session<span class="token punctuation">.</span>cookies<span class="token punctuation">,</span> f<span class="token punctuation">)</span>
 </code></pre></div></div></article></div><div id="privacy-notice"><div id="privacy-notice-content" class="markdown-body"><div><a id="privacy-notice-dismiss" class="btn"><svg width="18" height="18" viewBox="0 0 18 18" style="fill:currentColor;vertical-align:baseline;margin-top:-.3em;margin-bottom:-.3em"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9 15 4.41z"/></svg></a></div><div>Hover your mouse or tap on the left edge to navigate.<br>Upon dismissing, you acknowledge that you have read and understand our <a href="/privacy-policy/">Privacy Policy</a>.</div></div></div></body><footer><script src="/content/js/footer.js?v=202102080708"></script></footer></html>

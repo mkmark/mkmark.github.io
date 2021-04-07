@@ -9,8 +9,33 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 26 Mar 2021 04:16:04 GMT</pubDate>
+    <pubDate>Wed, 07 Apr 2021 17:31:28 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Project: Bamboo Building</title>
+      <link>http://www.mkmark.net/blog/work/project-bamboo-building/</link>
+      <guid>http://www.mkmark.net/blog/work/project-bamboo-building/</guid>
+      <pubDate>Wed, 07 Apr 2021 17:21:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;&lt;img src=&quot;/content/uploads/20210408-Bamboo-Building.jpg&quot; alt=&quot;20210408 Bamboo Building&quot;&gt;&lt;/p&gt;
+&lt;p&gt;A real bamboo/timber project to be built </description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p><img src="/content/uploads/20210408-Bamboo-Building.jpg" alt="20210408 Bamboo Building"></p><p>A real bamboo/timber project to be built in Changsha, Hunan, China.</p><p>Directed by Prof. Yan Xiao.</p><p>Completely parametrically modeled in Grasshopper.</p>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/work/">Work</category>
+      
+      
+      
+      <comments>http://www.mkmark.net/blog/work/project-bamboo-building/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>苏康码自动健康申报</title>
@@ -566,35 +591,6 @@
       
       
       <comments>http://www.mkmark.net/blog/release/project-netease-cloudmusic-playlist-exporter/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Project: Elastic-dark</title>
-      <link>http://www.mkmark.net/blog/release/project-elastic-dark/</link>
-      <guid>http://www.mkmark.net/blog/release/project-elastic-dark/</guid>
-      <pubDate>Tue, 16 Jun 2020 14:08:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/mkmark/elastic-dark&quot;&gt;mkmark/elastic-dark&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&quot;https://raw.githubusercontent.com/mkmark/elastic-da</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p><a href="https://github.com/mkmark/elastic-dark">mkmark/elastic-dark</a></p><div id="https://raw.githubusercontent.com/mkmark/elastic-dark/master/README.md"></div><script type="text/javascript">parseMd("https://raw.githubusercontent.com/mkmark/elastic-dark/master/README.md")</script>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/release/">Release</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/css/">CSS</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/github/">GitHub</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/release/project-elastic-dark/#disqus_thread</comments>
       
     </item>
     

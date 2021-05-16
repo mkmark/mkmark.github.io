@@ -9,7 +9,7 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 07 Apr 2021 17:39:16 GMT</pubDate>
+    <pubDate>Sun, 16 May 2021 12:24:52 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -26,7 +26,7 @@
       
       
       
-      <content:encoded><![CDATA[<p><img src="/content/uploads/20210408-Bamboo-Building.jpg" alt="20210408 Bamboo Building"></p><p><img src="/content/uploads/20210408-Bamboo-Building-2-3.jpg" alt="20210408 Bamboo Building-2-3"></p><p>A real bamboo/timber project to be built in Changsha, Hunan, China.</p><p>Directed by Prof. Yan Xiao.</p><p>Completely parametrically modeled in Grasshopper.</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p><img src="/content/uploads/20210408-Bamboo-Building.jpg" alt="20210408 Bamboo Building"></p><p><img src="/content/uploads/20210408-Bamboo-Building-2-3.jpg" alt="20210408 Bamboo Building-2-3"></p><p>A real bamboo/timber project to be built in Changsha, Hunan, China.</p><p>Completely parametrically modeled in Grasshopper.</p><p>Will possibly rebuild in Revit in near future, for practise purpose and engineering planning.</p><h2 id="Credits">Credits</h2><p>Directed by Prof. Yan Xiao.</p><p>Designed by Mark Ma.</p><p>Non-commercial project for research and demo purpose.</p>]]></content:encoded>
       
       
       <category domain="http://www.mkmark.net/archive/by-category/work/">Work</category>

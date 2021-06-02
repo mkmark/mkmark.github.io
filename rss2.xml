@@ -9,31 +9,144 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 16 May 2021 12:24:52 GMT</pubDate>
+    <pubDate>Wed, 02 Jun 2021 13:36:03 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Project: Bamboo Building</title>
-      <link>http://www.mkmark.net/blog/work/project-bamboo-building/</link>
-      <guid>http://www.mkmark.net/blog/work/project-bamboo-building/</guid>
-      <pubDate>Wed, 07 Apr 2021 17:21:00 GMT</pubDate>
+      <title>Project: zju-health-reporter</title>
+      <link>http://www.mkmark.net/blog/release/project-zju-health-reporter/</link>
+      <guid>http://www.mkmark.net/blog/release/project-zju-health-reporter/</guid>
+      <pubDate>Mon, 31 May 2021 12:53:00 GMT</pubDate>
       
         
         
-      <description>&lt;p&gt;&lt;img src=&quot;/content/uploads/20210408-Bamboo-Building.jpg&quot; alt=&quot;20210408 Bamboo Building&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/content/uploads/20210408-Bambo</description>
+      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/mkmark/netease-cloudmusic-playlist-exporter&quot;&gt;mkmark/zju-health-reporter&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&quot;https://raw.githubus</description>
         
       
       
       
-      <content:encoded><![CDATA[<p><img src="/content/uploads/20210408-Bamboo-Building.jpg" alt="20210408 Bamboo Building"></p><p><img src="/content/uploads/20210408-Bamboo-Building-2-3.jpg" alt="20210408 Bamboo Building-2-3"></p><p>A real bamboo/timber project to be built in Changsha, Hunan, China.</p><p>Completely parametrically modeled in Grasshopper.</p><p>Will possibly rebuild in Revit in near future, for practise purpose and engineering planning.</p><h2 id="Credits">Credits</h2><p>Directed by Prof. Yan Xiao.</p><p>Designed by Mark Ma.</p><p>Non-commercial project for research and demo purpose.</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p><a href="https://github.com/mkmark/netease-cloudmusic-playlist-exporter">mkmark/zju-health-reporter</a></p><div id="https://raw.githubusercontent.com/mkmark/zju-health-reporter/master/README.md"></div><script type="text/javascript">parseMd("https://raw.githubusercontent.com/mkmark/zju-health-reporter/master/README.md")</script>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/release/">Release</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/python/">Python</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/release/project-zju-health-reporter/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Project: Prefabricated Engineered Bamboo Mobile House - BIM Modeling</title>
+      <link>http://www.mkmark.net/blog/work/project-prefabricated-engineered-bamboo-mobile-house-bim-modeling/</link>
+      <guid>http://www.mkmark.net/blog/work/project-prefabricated-engineered-bamboo-mobile-house-bim-modeling/</guid>
+      <pubDate>Sun, 30 May 2021 08:15:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;Glubam is short for glue laminated bamboo, which is a new material&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>Glubam is short for glue laminated bamboo, which is a new material<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p><p>This is the BIM modeling project for a new code: Technical specification for prefabricated engineered bamboo mobile house.</p><video autoplay loop muted>    <source type="video/mp4" src="/content/uploads/Prefabricated-Engineered-Bamboo-Mobile-House-BIM-Modeling-1.2.1.mp4" /></video><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>Wu, Y., and Y. Xiao. &quot;Steel and glubam hybrid space truss.&quot; Engineering Structures 171 (2018): 140-153. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
       
       
       <category domain="http://www.mkmark.net/archive/by-category/work/">Work</category>
       
       
+      <category domain="http://www.mkmark.net/archive/by-tag/civil-engineering/">civil engineering</category>
       
-      <comments>http://www.mkmark.net/blog/work/project-bamboo-building/#disqus_thread</comments>
+      <category domain="http://www.mkmark.net/archive/by-tag/grasshopper/">Grasshopper</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/work/project-prefabricated-engineered-bamboo-mobile-house-bim-modeling/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>The 2nd Civil Engineering Computing and Simulation Technology Academic Conference</title>
+      <link>http://www.mkmark.net/blog/learn/the-2nd-civil-engineering-computing-and-simulation-technology-academic-conference/</link>
+      <guid>http://www.mkmark.net/blog/learn/the-2nd-civil-engineering-computing-and-simulation-technology-academic-conference/</guid>
+      <pubDate>Sat, 15 May 2021 13:12:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;I would not put my half organized notes here.&lt;/p&gt;
+&lt;p&gt;I met some of the greatest Chinese scholars in the field. Watched their report, and found myself at a very strange position.&lt;/p&gt;
+&lt;p&gt;I love computing and simulation technology, but the deeper it goes the more clear its boundry is - technology is technology, civil engineering is engineering, not science.&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>I would not put my half organized notes here.</p><p>I met some of the greatest Chinese scholars in the field. Watched their report, and found myself at a very strange position.</p><p>I love computing and simulation technology, but the deeper it goes the more clear its boundry is - technology is technology, civil engineering is engineering, not science.</p><a id="more"></a><p>Anyway, I got lucky and got a few photos taken by the camera man.</p><p><img src="http://wordpress.mkmark.net/content/uploads/20210515-The-2nd-Civil-Engineering-Computing-and-Simulation-Technology-Academic-Conference-Mark-1-scaled.jpeg" alt="20210515 The 2nd Civil Engineering Computing and Simulation Technology Academic Conference - Mark 1"></p><p><img src="http://wordpress.mkmark.net/content/uploads/20210515-The-2nd-Civil-Engineering-Computing-and-Simulation-Technology-Academic-Conference-Mark-2-scaled.jpeg" alt="20210515 The 2nd Civil Engineering Computing and Simulation Technology Academic Conference - Mark 2"></p>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/learn/">Learn</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/civil-engineering/">civil engineering</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/learn/the-2nd-civil-engineering-computing-and-simulation-technology-academic-conference/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Changsha Trip</title>
+      <link>http://www.mkmark.net/blog/travel/changsha-trip/</link>
+      <guid>http://www.mkmark.net/blog/travel/changsha-trip/</guid>
+      <pubDate>Sun, 09 May 2021 12:59:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;&lt;img src=&quot;/content/uploads/20210509-True-Fans-scaled.jpg&quot; alt=&quot;True Fans&quot;&gt;&lt;br&gt;
+Changsha Culture and Art Center, by Zaha Hadid.&lt;/p&gt;
+&lt;p&gt;A t</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p><img src="/content/uploads/20210509-True-Fans-scaled.jpg" alt="True Fans"><br>Changsha Culture and Art Center, by Zaha Hadid.</p><p>A true fans sees him everywhere.</p><p><img src="/content/uploads/20210509-College-of-Civil-Engineering-Hunan-University-scaled.jpg" alt="20210509 College of Civil Engineering, Hunan University"></p><p>Odd enough, the metro exit reads 'College of Civil Engineering, Hunan University' instead of just 'Hunan University', despite the entire campus is just outside of the exit and College of Civil Engineering is the one most far from the exit.</p>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/travel/">Travel</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/civil-engineering/">civil engineering</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/travel/changsha-trip/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Project: Glubam Building</title>
+      <link>http://www.mkmark.net/blog/work/project-glubam-building/</link>
+      <guid>http://www.mkmark.net/blog/work/project-glubam-building/</guid>
+      <pubDate>Wed, 07 Apr 2021 17:21:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;A &lt;strong&gt;real&lt;/strong&gt; glubam project to be built in Changsha, Hunan, China.&lt;/p&gt;
+&lt;p&gt;It will be the &lt;strong&gt;first glubam&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; multisotry office building in the world&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It is also my first calculation &lt;strong&gt;completely done in python. &lt;a href=&quot;/content/uploads/202106012045-Calculation.html&quot;&gt;The code can be found here&lt;/a&gt;&lt;/strong&gt;, in Chinese. You&#39;re always welcome to use google translate though.&lt;/p&gt;
+&lt;h2 id=&quot;Architecture&quot;&gt;Architecture&lt;/h2&gt;
+&lt;p&gt;The current accepted architecture proposal is&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://wordpress.mkmark.net/content/uploads/20210408-Glubam-Building-4.6-2.jpg&quot; alt=&quot;20210408 Glubam Building 4.6-2&quot;&gt;&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>A <strong>real</strong> glubam project to be built in Changsha, Hunan, China.</p><p>It will be the <strong>first glubam<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> multisotry office building in the world</strong>.</p><p>It is also my first calculation <strong>completely done in python. <a href="/content/uploads/202106012045-Calculation.html">The code can be found here</a></strong>, in Chinese. You're always welcome to use google translate though.</p><h2 id="Architecture">Architecture</h2><p>The current accepted architecture proposal is</p><p><img src="http://wordpress.mkmark.net/content/uploads/20210408-Glubam-Building-4.6-2.jpg" alt="20210408 Glubam Building 4.6-2"></p><a id="more"></a><p><img src="http://wordpress.mkmark.net/content/uploads/20210408-Glubam-Building-4.6-10.jpg" alt="20210408 Glubam Building 4.6-10"></p><p>Completely parametrically modeled in Grasshopper.</p><p>Will possibly rebuild in Revit in near future, for practise purpose and engineering planning.</p><h2 id="Engineering">Engineering</h2><p><a href="/content/uploads/202106012045-Calculation.html">Calculation</a> is done by python (in Chinese, but you are always welcome to use google translate) and SAP2000.</p><p>The blueprint is exported from Rhino-Grasshopper, and dimensioned by Autodesk CAD (To be updated).</p><h2 id="Credits">Credits</h2><p>Directed by Prof. Yan Xiao.</p><p>Designed by Mark Ma.</p><p>Non-commercial project for research and demo purpose.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>Wu, Y., and Y. Xiao. &quot;Steel and glubam hybrid space truss.&quot; Engineering Structures 171 (2018): 140-153. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/work/">Work</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/civil-engineering/">civil engineering</category>
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/grasshopper/">Grasshopper</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/work/project-glubam-building/#disqus_thread</comments>
       
     </item>
     
@@ -483,114 +596,6 @@
       
       
       <comments>http://www.mkmark.net/blog/misc/politicized-virus-and-sins-of-government/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Procrastinator’s dark playground</title>
-      <link>http://www.mkmark.net/blog/misc/procrastinator%E2%80%99s-dark-playground/</link>
-      <guid>http://www.mkmark.net/blog/misc/procrastinator%E2%80%99s-dark-playground/</guid>
-      <pubDate>Sun, 09 Aug 2020 23:04:00 GMT</pubDate>
-      
-      <description>&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=arj7oStGLkU&quot;&gt;Inside the mind of a master procrastinator | Tim Urban&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Youtube has successfully identified me as a procrastinator so it sent me this.&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p><a href="https://www.youtube.com/watch?v=arj7oStGLkU">Inside the mind of a master procrastinator | Tim Urban</a></p><p>Youtube has successfully identified me as a procrastinator so it sent me this.</p><a id="more"></a><h1>The problem</h1><p>It didn't took long for me to find what I have been for maybe several years.</p><p>Procrastination is a habit cultivated through growing, cause I still remember times when things are much more ordered. Once it kicks off, however, it's just gets overwhelming over time.</p><p>I feel kind of guilty to list things I've been stalling but it's gonna be a super long list.</p><h1>The analysis</h1><p>I try to come up with a remedy by looking back on my 'achievements'. It turns out nearly every long time goals realized is through a long-term effort self-sustained enough to carry on with itself. By sustaining, I mean the sense of periodical achievement and fun made up enough for the effort needed. Yes, I technically failed on almost everything else.</p><p>The interesting field to me, i.e. design and programming both draw huge amount of sense of satisfaction from art and automation.</p><p>Well, automation is art too - practical art to save effort, which generates pleasure as art does.</p><p>The desire for knowledge, on the other hand, isn't quite self-sustained when there is no direct application or achievement.</p><p>There are but seems to be two exception: Physics and English. No application, no achievement, not art, nor automated.</p><p>The trick on Physics is the desire to understand how things works CLEARLY. Part of it was to generate an automated procedure to describe how things works. It's a more specific field of knowledge whereas looking into a civil engineering code book doesn't count. (I feel sorry for Prof. Moehle as he clearly has tried to put things organized.) Programming automated design process counts though.</p><p>There leaves the only exception then: English. It turns out English itself was the dark playground. The most successful English learning has been from video games, novels, and podcasts. See, no work, all play.</p><h1>The conclusion</h1><p>Then I realized that all my 'achievements' actually came from my dark playground. I have NEVER winned a singel battle since confrontation against procrastinating.</p><p>It's not frustrating though as when you realize there is no solution, you kinda feel harmony by letting it go.</p><h1>The solution</h1><p>I was kidding. Procrastination needs to be fixed.</p><p>De facto: The dark playground of art and automation shall persist as there's no way to get away from my nature.</p><p>I found long ago, that any kind of art is not going to be my profession as the way it works, your job is evaluated by peoples' sense of art rather than logic, and you'll basically be limited to other peoples' expectation by doing a 'good' job.</p><p>The tempt to become a professional programmer lingers on, but I bet I'll one day see programming as a basic skill mastered by everyone, just like Math. After all, the innovation was done by the ones who proposed the concept of programming, and everyone else are justing using it as a tool rather than innovating real new things.</p><p>I'll transform to Mechanics as it's basically brach of Physics. There are new theories to be proposed, tested, and programmed into production. It will be my day when I combine all these knowledge together.</p><h1>More dark playground!</h1><p>I'll make an automated list checking procedure to track my progress. So long for procrastination.</p>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/misc/">Misc</category>
-      
-      
-      
-      <comments>http://www.mkmark.net/blog/misc/procrastinator%E2%80%99s-dark-playground/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>WordPress PHP short code to parse markdown</title>
-      <link>http://www.mkmark.net/blog/solution/wordpress-php-short-code-to-parse-markdown/</link>
-      <guid>http://www.mkmark.net/blog/solution/wordpress-php-short-code-to-parse-markdown/</guid>
-      <pubDate>Mon, 03 Aug 2020 23:50:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;Requirements to include a markdown file from elsewhere emerged when I decide to auto update my blog with github readme page.&lt;/p&gt;
-&lt;p&gt;Since</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>Requirements to include a markdown file from elsewhere emerged when I decide to auto update my blog with github readme page.</p><p>Since markdown itself cannot include another markdown file, I come up with a work around to parse the github raw on the air.</p><p>The following example requires wp-githuber-md - since I am already using it anyway. Any equivalent will do.</p><pre class="language-php" data-language="php"><code class="language-php"><span class="token comment">/*====== parse_md shortcode ======*/</span><span class="token keyword">function</span> <span class="token function">parse_md</span><span class="token punctuation">(</span><span class="token variable">$atts</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token variable">$src</span> <span class="token operator">=</span> <span class="token variable">$atts</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'src'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token variable">$md</span> <span class="token operator">=</span> <span class="token function">file_get_contents</span><span class="token punctuation">(</span><span class="token variable">$src</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$md</span> <span class="token operator">===</span> <span class="token constant boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token variable">$html</span> <span class="token operator">=</span> <span class="token string double-quoted-string">"Could not load <span class="token interpolation"><span class="token variable">$src</span></span>"</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>        <span class="token keyword">require_once</span> <span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'DOCUMENT_ROOT'</span><span class="token punctuation">]</span> <span class="token operator">.</span> <span class="token string double-quoted-string">"/wp-content/plugins/wp-githuber-md/src/Modules/MarkdownParser.php"</span><span class="token punctuation">;</span><span class="token variable">$markdownParser</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name class-name-fully-qualified">Githuber<span class="token punctuation">\</span>Module<span class="token punctuation">\</span>MarkdownParser</span><span class="token punctuation">;</span><span class="token variable">$html</span> <span class="token operator">=</span> <span class="token variable">$markdownParser</span><span class="token operator">-></span><span class="token function">transform</span><span class="token punctuation">(</span><span class="token variable">$md</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span>    <span class="token keyword">return</span> <span class="token variable">$html</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span class="token function">add_shortcode</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'parse_md'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'parse_md'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><h3 id="Usage">Usage</h3><pre class="language-markdown" data-language="markdown"><code class="language-markdown">[parse_md src="<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>]</code></pre>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/solution/">Solution</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/wordpress/">WordPress</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/php/">PHP</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/solution/wordpress-php-short-code-to-parse-markdown/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>流媒体平台与垄断</title>
-      <link>http://www.mkmark.net/blog/misc/%E6%B5%81%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0%E4%B8%8E%E5%9E%84%E6%96%AD/</link>
-      <guid>http://www.mkmark.net/blog/misc/%E6%B5%81%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0%E4%B8%8E%E5%9E%84%E6%96%AD/</guid>
-      <pubDate>Wed, 15 Jul 2020 18:08:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;往大里说，垄断完大家都没好果子吃。&lt;br&gt;
-往小里说，听音乐的方案现在已经由一个软件转化成了多个部分。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;听新歌：网易云日推仍然是不错的选择，搭配unblockneteasemusic可以基本覆盖国内流媒体的资源。Spotify备选。&lt;/li&gt;
-&lt;l</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>往大里说，垄断完大家都没好果子吃。<br>往小里说，听音乐的方案现在已经由一个软件转化成了多个部分。</p><ul><li>听新歌：网易云日推仍然是不错的选择，搭配unblockneteasemusic可以基本覆盖国内流媒体的资源。Spotify备选。</li><li>下载　：musictools.exe, spotdl</li><li>整理　：music-organizer.py, mp3tag</li><li>歌单　：netease-cloudmusic-playlist-exporter</li><li>听老歌：foobar2000</li><li>安卓　：adb-sync</li></ul><p>若是在七年前，上述方案已经简直不要太完美，下载的歌曲配合iTunes便能实现多终端同步，而现在连Apple都转向做流媒体了。<br>流媒体的到来改变了一切。尝到了流媒体的便捷，再往回走就显得格外困难。<br>从好处说，流媒体音乐平台极大扩充了音乐来源，保护了音乐版权，激励了音乐人的创作。<br>往坏处说，垄断的平台使用户丧失了议价的能力，长远来看也会侵蚀音乐人的权益。<br>垄断平台甚至不需要完全阻断用户的自行方案，他们需要做的只是尽量抬高其他方案的实现门槛。只要他们的方案简单易用并且掌握了大量用户群体，便无需再为用户考虑，躺着数钱即可。<br>举例来说网易云已经从最开始的自由听歌下载变成了基本不能下载，部分歌曲仅能试听，用来笼络顾客的云盘也基本报废(Edit-20200731 不稳定)。</p><p>版权完善方向看，音乐流媒体化是大势所趋。<br>从道德角度上讲，所有媒体，但凡未曾声明自由传播，都不是免费的。互联网成为盗版的温床正是因为少数人的盗版行为（做种的，上传的，开服务器的，以及许多流媒体平台的早期），配合上法律的漏洞，为普罗大众的盗版行为提供了便捷的借口。<br>让人感到不安的是，为了保护版权所付出的代价事实上正从用户身上提取。在过去，获得的音乐便是实实在在的文件，如何管理，放在那里听都是用户的选择，也正是这种极大的自由促生了盗版。而现如今，流媒体服务商正以一种廉价的方式提供加密版的文件或数据流以阻止这类自由使用，并同时把越来越多的受众捆绑在自己的平台上，反馈于垄断的加剧。</p><p>一方面我认为保护版权不应当以损害用户的自由为代价，另一方面，事实上盗版这类社会问题最终也只能通过社会的协商和妥协来解决，这意味着必须有群体让出曾经享受的权益。对用户，付费的流媒体和不再自由的音乐文件便是代价。对音乐人，凭空出现的中间商保护费保护了他们的版权的同时也瓜分了他们的蛋糕——但也同时做大了蛋糕，激发许多了原本不存在的需求。</p><p>说到底，整件事情中用户始终站在弱势方。音乐，到底是卖方市场，而垄断平台的加入更加促成了这一事实。</p>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/misc/">Misc</category>
-      
-      
-      
-      <comments>http://www.mkmark.net/blog/misc/%E6%B5%81%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0%E4%B8%8E%E5%9E%84%E6%96%AD/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Project: netease-cloudmusic-playlist-exporter</title>
-      <link>http://www.mkmark.net/blog/release/project-netease-cloudmusic-playlist-exporter/</link>
-      <guid>http://www.mkmark.net/blog/release/project-netease-cloudmusic-playlist-exporter/</guid>
-      <pubDate>Tue, 14 Jul 2020 21:38:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/mkmark/netease-cloudmusic-playlist-exporter&quot;&gt;mkmark/netease-cloudmusic-playlist-exporter&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&quot;htt</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p><a href="https://github.com/mkmark/netease-cloudmusic-playlist-exporter">mkmark/netease-cloudmusic-playlist-exporter</a></p><div id="https://raw.githubusercontent.com/mkmark/netease-cloudmusic-playlist-exporter/master/README.md"></div><script type="text/javascript">parseMd("https://raw.githubusercontent.com/mkmark/netease-cloudmusic-playlist-exporter/master/README.md")</script>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/release/">Release</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/python/">Python</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/github/">GitHub</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/release/project-netease-cloudmusic-playlist-exporter/#disqus_thread</comments>
       
     </item>
     

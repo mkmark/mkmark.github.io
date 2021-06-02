@@ -9,7 +9,7 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 02 Jun 2021 14:04:33 GMT</pubDate>
+    <pubDate>Wed, 02 Jun 2021 14:19:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -127,7 +127,7 @@ Changsha Culture and Art Center, by Zaha Hadid.&lt;/p&gt;
       <pubDate>Wed, 07 Apr 2021 17:21:00 GMT</pubDate>
       
       <description>&lt;p&gt;A &lt;strong&gt;real&lt;/strong&gt; glubam project to be built in Changsha, Hunan, China.&lt;/p&gt;
-&lt;p&gt;It will be the &lt;strong&gt;first glubam&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; multisotry office building in the world&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;It will be the &lt;strong&gt;first glubam&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; multistory office building in the world&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;It is also my first calculation &lt;strong&gt;completely done in python. &lt;a href=&quot;/content/uploads/202106012045-Calculation.html&quot;&gt;The code can be found here&lt;/a&gt;&lt;/strong&gt;, in Chinese. You&#39;re always welcome to use google translate though.&lt;/p&gt;
 &lt;h2 id=&quot;Architecture&quot;&gt;Architecture&lt;/h2&gt;
 &lt;p&gt;The current accepted architecture proposal is&lt;/p&gt;
@@ -135,7 +135,7 @@ Changsha Culture and Art Center, by Zaha Hadid.&lt;/p&gt;
       
       
       
-      <content:encoded><![CDATA[<p>A <strong>real</strong> glubam project to be built in Changsha, Hunan, China.</p><p>It will be the <strong>first glubam<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> multisotry office building in the world</strong>.</p><p>It is also my first calculation <strong>completely done in python. <a href="/content/uploads/202106012045-Calculation.html">The code can be found here</a></strong>, in Chinese. You're always welcome to use google translate though.</p><h2 id="Architecture">Architecture</h2><p>The current accepted architecture proposal is</p><p><img src="http://wordpress.mkmark.net/content/uploads/20210408-Glubam-Building-4.6-2.jpg" alt="20210408 Glubam Building 4.6-2"></p><a id="more"></a><p><img src="http://wordpress.mkmark.net/content/uploads/20210408-Glubam-Building-4.6-10.jpg" alt="20210408 Glubam Building 4.6-10"></p><p>Completely parametrically modeled in Grasshopper.</p><p>Will possibly rebuild in Revit in near future, for practise purpose and engineering planning.</p><h2 id="Engineering">Engineering</h2><p><a href="/content/uploads/202106012045-Calculation.html">Calculation</a> is done by python (in Chinese, but you are always welcome to use google translate) and SAP2000.</p><p>The blueprint is exported from Rhino-Grasshopper, and dimensioned by Autodesk CAD (To be updated).</p><h2 id="Credits">Credits</h2><p>Directed by Prof. Yan Xiao.</p><p>Designed by Mark Ma.</p><p>Non-commercial project for research and demo purpose.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>Wu, Y., and Y. Xiao. &quot;Steel and glubam hybrid space truss.&quot; Engineering Structures 171 (2018): 140-153. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
+      <content:encoded><![CDATA[<p>A <strong>real</strong> glubam project to be built in Changsha, Hunan, China.</p><p>It will be the <strong>first glubam<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> multistory office building in the world</strong>.</p><p>It is also my first calculation <strong>completely done in python. <a href="/content/uploads/202106012045-Calculation.html">The code can be found here</a></strong>, in Chinese. You're always welcome to use google translate though.</p><h2 id="Architecture">Architecture</h2><p>The current accepted architecture proposal is</p><p><img src="http://wordpress.mkmark.net/content/uploads/20210408-Glubam-Building-4.6-2.jpg" alt="20210408 Glubam Building 4.6-2"></p><a id="more"></a><p><img src="http://wordpress.mkmark.net/content/uploads/20210408-Glubam-Building-4.6-10.jpg" alt="20210408 Glubam Building 4.6-10"></p><p>Completely parametrically modeled in Grasshopper.</p><p>Will possibly rebuild in Revit in near future, for practise purpose and engineering planning.</p><h2 id="Engineering">Engineering</h2><p><a href="/content/uploads/202106012045-Calculation.html">Calculation</a> is done by python (in Chinese, but you are always welcome to use google translate) and SAP2000.</p><p>The blueprint is exported from Rhino-Grasshopper, and dimensioned by Autodesk CAD (To be updated).</p><h2 id="Credits">Credits</h2><p>Directed by Prof. Yan Xiao.</p><p>Designed by Mark Ma.</p><p>Non-commercial project for research and demo purpose.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>Wu, Y., and Y. Xiao. &quot;Steel and glubam hybrid space truss.&quot; Engineering Structures 171 (2018): 140-153. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
       
       
       <category domain="http://www.mkmark.net/archive/by-category/work/">Work</category>

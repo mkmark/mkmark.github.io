@@ -9,7 +9,7 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 10 Sep 2021 13:33:47 GMT</pubDate>
+    <pubDate>Fri, 10 Sep 2021 16:07:03 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -77,9 +77,76 @@
     </item>
     
     <item>
-      <title>X3-notoriety-hack</title>
-      <link>http://www.mkmark.net/blog/game/x3-notoriety-hack/</link>
-      <guid>http://www.mkmark.net/blog/game/x3-notoriety-hack/</guid>
+      <title>Project: Terrain Modelling</title>
+      <link>http://www.mkmark.net/blog/solution/project-terrain-modelling/</link>
+      <guid>http://www.mkmark.net/blog/solution/project-terrain-modelling/</guid>
+      <pubDate>Mon, 06 Sep 2021 15:58:00 GMT</pubDate>
+      
+      <description>&lt;p&gt;This is a sub project of the ongoing project: Hengjin Villiage Plan.&lt;/p&gt;
+&lt;h1&gt;Terrain Model Report&lt;/h1&gt;
+&lt;h2 id=&quot;DEM-data-source&quot;&gt;DEM data source&lt;/h2&gt;
+&lt;h3 id=&quot;GoogleEarth-RenderDoc-Blender&quot;&gt;GoogleEarth - RenderDoc - Blender&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://earth.google.com/web/search/Zhejiang,+Ningbo,+Ninghai+County,+%e6%a8%aa%e9%87%91%e6%9d%91/@29.33703766,121.48147217,179.7368143a,3381.49344812d,35y,-0h,0t,0r/data=CpYBGmwSZgolMHgzNDRkZjNhYzJiYmQ1ODYxOjB4NTllZmE2Yjg5MjhmZDI1NxmTNeohGlU9QCFQ-dfyyl9eQCorWmhlamlhbmcsIE5pbmdibywgTmluZ2hhaSBDb3VudHksIOaoqumHkeadkRgBIAEiJgokCb9pKcQ9ZT1AEeUdNtsSwTxAGf29YLA_al5AIfgcJNhIPF5A&quot;&gt;earth.google.com&lt;/a&gt;&lt;br&gt;
+not seamless, unable to use&lt;/p&gt;
+&lt;h3 id=&quot;SketchUp-Digital-Globe&quot;&gt;SketchUp - Digital Globe&lt;/h3&gt;
+&lt;p&gt;low resolution&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/content/uploads/merged_mesh_contour_500.png&quot; alt=&quot;picture 1&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Dataset-ASTGTMV003-N29E121&quot;&gt;Dataset: ASTGTMV003_N29E121&lt;/h3&gt;
+&lt;p&gt;DOI 10.5067/ASTER/ASTGTM.003&lt;br&gt;
+&lt;a href=&quot;https://search.earthdata.nasa.gov/search/granules/granule-details?p=C1711961296-LPCLOUD&amp;amp;pg%5B0%5D%5Bv%5D=f&amp;amp;pg%5B0%5D%5Bgsk%5D=-start_date&amp;amp;g=G1726749481-LPCLOUD&amp;amp;sp%5B0%5D=121.48139%2C29.25113&amp;amp;tl=1630845114.302!3!!&amp;amp;m=29.207652643607364!120.21240234375001!7!1!0!0%2C2&quot;&gt;earthdata&lt;/a&gt;&lt;br&gt;
+2000-03-01 00:00:00 - 2013-11-30 23:59:59&lt;br&gt;
+resolution of 1 arc second (approximately 30 meter horizontal posting at the equator)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/content/uploads/ASTGTMV003_N29E121_dem_contour_500.png&quot; alt=&quot;picture 2&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Dataset-ALPSRP133840570-RTC-HI-RES&quot;&gt;Dataset: ALPSRP133840570-RTC_HI_RES&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://search.asf.alaska.edu/#/?zoom=8.543%C2%A2er=121.186,28.158&amp;amp;polygon=POLYGON((121.471%2029.3287,121.4988%2029.3287,121.4988%2029.342,121.471%2029.342,121.471%2029.3287))&amp;amp;resultsLoaded=true&amp;amp;granule=ALPSRP133840570-RTC_LOW_RES&amp;amp;dataset=ALOS&amp;amp;productTypes=RTC_LOW_RES,RTC_HI_RES&quot;&gt;alaska.edu&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://search.earthdata.nasa.gov/search/granules?p=C1206487504-ASF&amp;amp;pg%5B0%5D%5Bv%5D=f&amp;amp;pg%5B0%5D%5Bgsk%5D=-start_date&amp;amp;q=alos%20palsar&amp;amp;sp%5B0%5D=121.48139%2C29.25113&amp;amp;tl=1630845114!3!!&quot;&gt;earthdata&lt;/a&gt;&lt;br&gt;
+2008-07-29 14:21:47 - 2008-07-29 14:21:55&lt;br&gt;
+resolution of 12m&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/content/uploads/AP_13384_FBD_F0570_RT1_dem_contour_500.png&quot; alt=&quot;picture 3&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Satalite-TerraSAR-X&quot;&gt;Satalite: TerraSAR-X&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://tpm-ds.eo.esa.int/smcat/TerraSAR-X/2/10/53/&quot;&gt;esa.int&lt;/a&gt;&lt;br&gt;
+region not found&lt;/p&gt;
+&lt;h2 id=&quot;image-data-source&quot;&gt;image data source&lt;/h2&gt;
+&lt;h3 id=&quot;SketchUp-Digital-Globe-2&quot;&gt;SketchUp - Digital Globe&lt;/h3&gt;
+&lt;p&gt;Photoshop: remove excessive water print, and additional drawing&lt;br&gt;
+Illustrator: vectorization&lt;br&gt;
+caffe: scale up resolution&lt;/p&gt;
+&lt;h3 id=&quot;Satalite-Worldview-3&quot;&gt;Satalite: Worldview-3&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://earth.esa.int/eogateway/catalog/worldview-3-full-archive-and-tasking?sortby=NEWEST_FIRST&quot;&gt;esa.int&lt;/a&gt;&lt;br&gt;
+resolution of 0.3m&lt;br&gt;
+proposal required, need waiting within 14 days&lt;br&gt;
+owned by digital globe so potentially we may have already get it&lt;/p&gt;
+&lt;h3 id=&quot;Satalite-高分二号&quot;&gt;Satalite: 高分二号&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.resdc.cn/data.aspx?DATAID=214&quot;&gt;resdc.cn&lt;/a&gt;&lt;br&gt;
+resolution of 0.8m&lt;br&gt;
+要钱&lt;br&gt;
+分辨率不如Worldview-3&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>This is a sub project of the ongoing project: Hengjin Villiage Plan.</p><h1>Terrain Model Report</h1><h2 id="DEM-data-source">DEM data source</h2><h3 id="GoogleEarth-RenderDoc-Blender">GoogleEarth - RenderDoc - Blender</h3><p><a href="https://earth.google.com/web/search/Zhejiang,+Ningbo,+Ninghai+County,+%e6%a8%aa%e9%87%91%e6%9d%91/@29.33703766,121.48147217,179.7368143a,3381.49344812d,35y,-0h,0t,0r/data=CpYBGmwSZgolMHgzNDRkZjNhYzJiYmQ1ODYxOjB4NTllZmE2Yjg5MjhmZDI1NxmTNeohGlU9QCFQ-dfyyl9eQCorWmhlamlhbmcsIE5pbmdibywgTmluZ2hhaSBDb3VudHksIOaoqumHkeadkRgBIAEiJgokCb9pKcQ9ZT1AEeUdNtsSwTxAGf29YLA_al5AIfgcJNhIPF5A">earth.google.com</a><br>not seamless, unable to use</p><h3 id="SketchUp-Digital-Globe">SketchUp - Digital Globe</h3><p>low resolution</p><p><img src="/content/uploads/merged_mesh_contour_500.png" alt="picture 1"></p><h3 id="Dataset-ASTGTMV003-N29E121">Dataset: ASTGTMV003_N29E121</h3><p>DOI 10.5067/ASTER/ASTGTM.003<br><a href="https://search.earthdata.nasa.gov/search/granules/granule-details?p=C1711961296-LPCLOUD&amp;pg%5B0%5D%5Bv%5D=f&amp;pg%5B0%5D%5Bgsk%5D=-start_date&amp;g=G1726749481-LPCLOUD&amp;sp%5B0%5D=121.48139%2C29.25113&amp;tl=1630845114.302!3!!&amp;m=29.207652643607364!120.21240234375001!7!1!0!0%2C2">earthdata</a><br>2000-03-01 00:00:00 - 2013-11-30 23:59:59<br>resolution of 1 arc second (approximately 30 meter horizontal posting at the equator)</p><p><img src="/content/uploads/ASTGTMV003_N29E121_dem_contour_500.png" alt="picture 2"></p><h3 id="Dataset-ALPSRP133840570-RTC-HI-RES">Dataset: ALPSRP133840570-RTC_HI_RES</h3><p><a href="https://search.asf.alaska.edu/#/?zoom=8.543%C2%A2er=121.186,28.158&amp;polygon=POLYGON((121.471%2029.3287,121.4988%2029.3287,121.4988%2029.342,121.471%2029.342,121.471%2029.3287))&amp;resultsLoaded=true&amp;granule=ALPSRP133840570-RTC_LOW_RES&amp;dataset=ALOS&amp;productTypes=RTC_LOW_RES,RTC_HI_RES">alaska.edu</a><br><a href="https://search.earthdata.nasa.gov/search/granules?p=C1206487504-ASF&amp;pg%5B0%5D%5Bv%5D=f&amp;pg%5B0%5D%5Bgsk%5D=-start_date&amp;q=alos%20palsar&amp;sp%5B0%5D=121.48139%2C29.25113&amp;tl=1630845114!3!!">earthdata</a><br>2008-07-29 14:21:47 - 2008-07-29 14:21:55<br>resolution of 12m</p><p><img src="/content/uploads/AP_13384_FBD_F0570_RT1_dem_contour_500.png" alt="picture 3"></p><h3 id="Satalite-TerraSAR-X">Satalite: TerraSAR-X</h3><p><a href="https://tpm-ds.eo.esa.int/smcat/TerraSAR-X/2/10/53/">esa.int</a><br>region not found</p><h2 id="image-data-source">image data source</h2><h3 id="SketchUp-Digital-Globe-2">SketchUp - Digital Globe</h3><p>Photoshop: remove excessive water print, and additional drawing<br>Illustrator: vectorization<br>caffe: scale up resolution</p><h3 id="Satalite-Worldview-3">Satalite: Worldview-3</h3><p><a href="https://earth.esa.int/eogateway/catalog/worldview-3-full-archive-and-tasking?sortby=NEWEST_FIRST">esa.int</a><br>resolution of 0.3m<br>proposal required, need waiting within 14 days<br>owned by digital globe so potentially we may have already get it</p><h3 id="Satalite-高分二号">Satalite: 高分二号</h3><p><a href="https://www.resdc.cn/data.aspx?DATAID=214">resdc.cn</a><br>resolution of 0.8m<br>要钱<br>分辨率不如Worldview-3</p><a id="more"></a><h2 id="Reference">Reference</h2><p>EarthExplorer<br>https://earthexplorer.usgs.gov/</p><p>29.34°N 121.49°E | Zoom Earth<br>https://zoom.earth/#view=29.335552,121.487199,17z</p><p>digital elevation model commercial high resolution - Google Search<br>https://www.google.com.hk/search?q=digital+elevation+model+commercial+high+resolution&amp;newwindow=1&amp;sxsrf=AOaemvJZai9EFtmZY9AR-nwIy6eerUCOSg%3A1630848121593&amp;ei=ecQ0YbG2I9j9-gSl3pfIDA&amp;oq=digital+elevation+model+commercial+high+res&amp;gs_lcp=Cgdnd3Mtd2l6EAMYADIICCEQFhAdEB46BwgAEEcQsAM6BQgAEM0CSgQIQRgAUM8mWJYyYPQ3aAFwAngAgAG9AogBoxSSAQUyLTguMZgBAKABAcgBCMABAQ&amp;sclient=gws-wiz</p><p>Digital elevation model - Wikipedia<br>https://en.wikipedia.org/wiki/Digital_elevation_model</p><p>ALOS dem buy - Google Search<br>https://www.google.com.hk/search?q=ALOS+dem+buy&amp;newwindow=1&amp;biw=1920&amp;bih=880&amp;sxsrf=AOaemvKJqp7hyVluwTrlcuuAfEYPPDBivQ%3A1630848278878&amp;ei=FsU0Yaz9NIbn-gSorLfIDA&amp;oq=ALOS+dem+buy&amp;gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABMgUIIRCrAjIFCCEQqwIyBQghEKsCOgcIABBHELADOgcIABCwAxBDOgUIABCABDoKCAAQgAQQhwIQFDoFCAAQywFKBAhBGABQqbgBWIy9AWCwvwFoAXACeACAAcgCiAGxB5IBBTItMS4ymAEAoAEByAEJwAEB&amp;sclient=gws-wiz&amp;ved=0ahUKEwis4OCi9-fyAhWGs54KHSjWDckQ4dUDCA8&amp;uact=5</p><p>ALOS Global Digital Surface Model &quot;ALOS World 3D - 30m&quot; (AW3D30)<br>https://www.eorc.jaxa.jp/ALOS/en/aw3d30/index.htm</p><p>Buy AW3D Standard DEMs - Apollo Mapping | The Image Hunters<br>https://apollomapping.com/digital-elevation-models/aw3d-standard-dem</p><p>5m DTM<br>https://shop.geospatial.com/product/07-WDAN-153</p><p>OpenDEM<br>https://www.opendem.info/opendemsearcher.html</p><p>EarthCache - Request thank you — SkyWatch<br>https://www.skywatch.com/earthcache/thank-you?submissionGuid=7761b33c-3c07-4e06-b961-95edb4f5259b</p><p>SkyWatch - Commercial Satellite Imagery Made Accessible<br>https://www.skywatch.com/</p><p>Top 9 free sources of satellite data [2021 update] — SkyWatch<br>https://www.skywatch.com/blog/free-sources-of-satellite-data</p><p>5M DTM download - Google Search<br>https://www.google.com.hk/search?q=5M+DTM+download&amp;newwindow=1&amp;biw=1920&amp;bih=880&amp;sxsrf=AOaemvKK7AMHsdwC2BgbRCg1pGOm5WJzMQ%3A1630848410718&amp;ei=msU0YbGVK4Lf-wSl4ZXIDA&amp;oq=5M+DTM+download&amp;gs_lcp=Cgdnd3Mtd2l6EAM6BggAEBYQHjoFCCEQqwJKBAhBGABQ9PIVWNiKFmDbixZoAHACeAGAAekJiAG8HpIBCzItNC4yLjYtMS4xmAEAoAECoAEBwAEB&amp;sclient=gws-wiz&amp;ved=0ahUKEwixys_h9-fyAhWC754KHaVwBckQ4dUDCA8&amp;uact=5</p><p>DEM, DSM &amp; DTM Differences - A Look at Elevation Models in GIS - GIS Geography<br>https://gisgeography.com/dem-dsm-dtm-differences/</p><p>DEM_淘宝搜索<br>https://s.taobao.com/search?q=DEM&amp;imgfile=&amp;commend=all&amp;ssid=s5-e&amp;search_type=item&amp;sourceId=tb.index&amp;spm=a21bo.21814703.201856-taobao-item.1&amp;ie=utf8&amp;initiative_id=tbindexz_20170306</p><p>landsat、MODIS、哨兵、灯光数据、DEM、遥感卫星数据代下载-淘宝网<br>https://item.taobao.com/item.htm?spm=a230r.1.14.28.40311b14WJhsI2&amp;id=615012912193&amp;ns=1&amp;abbucket=13#detail</p><p>5米DEM高程数据和12、30、90米DEM 全球DEM高程数据全国都有-淘宝网<br>https://item.taobao.com/item.htm?spm=a230r.1.14.51.40311b14WJhsI2&amp;id=636716772167&amp;ns=1&amp;abbucket=13#detail</p><p>landsat、MODIS、哨兵、灯光数据、DEM、遥感卫星数据代下载-淘宝网<br>https://item.taobao.com/item.htm?spm=a230r.1.14.30.40311b14WJhsI2&amp;id=615012912193&amp;ns=1&amp;abbucket=13#detail</p><p>alos dem download - Google Search<br>https://www.google.com.hk/search?q=alos+dem+download&amp;newwindow=1&amp;sxsrf=AOaemvLT4qDheUSzyDfGE_RezS3bzwjhRQ%3A1630849057632&amp;ei=Icg0YYH_JY7S-wSHu6TIDA&amp;oq=alos+dem+down&amp;gs_lcp=Cgdnd3Mtd2l6EAMYADIFCAAQgAQyBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BAgjECc6BQgAEJECOgoILhDHARDRAxBDOgQIABBDOgcILhCxAxBDOgcIABCxAxBDOggIABCABBCxAzoLCC4QgAQQxwEQrwE6BwguEIAEEAo6BwgAEIAEEAo6BQguEIAEOgUIABDLAToKCAAQgAQQhwIQFEoECEEYAFD15gdYi4EIYMKLCGgAcAJ4AYAB6gSIAbsekgEJMi03LjQuMC4xmAEAoAEBwAEB&amp;sclient=gws-wiz</p><p>Downloading 12.5 m ALOS PALSAR High-Resolution DEM - The Geo-ICT Blog<br>https://thegeoict.com/blog/2019/10/28/downloading-12-5-m-alos-palsar-high-resolution-dem/</p><p>ALOS PALSAR - Google Search<br>https://www.google.com.hk/search?q=ALOS+PALSAR&amp;oq=ALOS+PALSAR&amp;aqs=chrome..69i57j69i60l2&amp;sourceid=chrome&amp;ie=UTF-8</p><p>About ALOS - PALSAR<br>https://www.eorc.jaxa.jp/ALOS/en/about/palsar.htm</p><p>ALOS PALSAR – ASF<br>https://asf.alaska.edu/data-sets/sar-data-sets/alos-palsar/</p><p>Get Started – ASF<br>https://asf.alaska.edu/how-to/get-started/#view_sar_data</p><p>ASF Data Search<br>https://search.asf.alaska.edu/#/?polygon=POLYGON((121.471%2029.3287,121.4988%2029.3287,121.4988%2029.342,121.471%2029.342,121.471%2029.3287))&amp;productTypes=GRD_HD&amp;resultsLoaded=true&amp;granule=S1A_IW_GRDH_1SDV_20210829T095437_20210829T095502_039443_04A8E8_FE3A-GRD_HD</p><p>ASF Data Search<br>https://search.asf.alaska.edu/#/?zoom=8.543¢er=121.186,28.158&amp;polygon=POLYGON((121.471%2029.3287,121.4988%2029.3287,121.4988%2029.342,121.471%2029.342,121.471%2029.3287))&amp;resultsLoaded=true&amp;granule=ALPSRP133840570-RTC_LOW_RES&amp;dataset=ALOS&amp;productTypes=RTC_LOW_RES,RTC_HI_RES</p><p>AP_13384_FBD_F0570_RT1.geo.jpg (999×884)<br>https://unzip.asf.alaska.edu/RTC_HI_RES/A3/AP_13384_FBD_F0570_RT1.zip/AP_13384_FBD_F0570_RT1/AP_13384_FBD_F0570_RT1.geo.jpg</p><p>Dataset Homepage<br>https://www.eorc.jaxa.jp/ALOS/en/dataset/dataset_index.htm</p><p>TerraSAR-X ESA archive - Earth Online<br>https://earth.esa.int/eogateway/catalog/terrasar-x-esa-archive</p><p>ESA TPM Catalogue - Search map for collection 'TerraSAR-X'<br>https://tpm-ds.eo.esa.int/smcat/TerraSAR-X/2/10/53/</p>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/solution/">Solution</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/grasshopper/">Grasshopper</category>
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/python/">Python</category>
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/rhino/">Rhino</category>
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/sketchup/">SketchUp</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/solution/project-terrain-modelling/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Project: X3-notoriety-hack</title>
+      <link>http://www.mkmark.net/blog/game/project-x3-notoriety-hack/</link>
+      <guid>http://www.mkmark.net/blog/game/project-x3-notoriety-hack/</guid>
       <pubDate>Fri, 03 Sep 2021 13:17:00 GMT</pubDate>
       
         
@@ -96,10 +163,12 @@
       <category domain="http://www.mkmark.net/archive/by-category/game/">Game</category>
       
       
+      <category domain="http://www.mkmark.net/archive/by-tag/x3/">X3</category>
+      
       <category domain="http://www.mkmark.net/archive/by-tag/lua/">Lua</category>
       
       
-      <comments>http://www.mkmark.net/blog/game/x3-notoriety-hack/#disqus_thread</comments>
+      <comments>http://www.mkmark.net/blog/game/project-x3-notoriety-hack/#disqus_thread</comments>
       
     </item>
     
@@ -550,51 +619,6 @@ Changsha Culture and Art Center, by Zaha Hadid.&lt;/p&gt;
       
       
       <comments>http://www.mkmark.net/blog/misc/tall-grass/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Virtualize Dual-boot Linux</title>
-      <link>http://www.mkmark.net/blog/solution/virtualize-dual-boot-linux/</link>
-      <guid>http://www.mkmark.net/blog/solution/virtualize-dual-boot-linux/</guid>
-      <pubDate>Sun, 17 Jan 2021 00:42:00 GMT</pubDate>
-      
-      <description>&lt;h2 id=&quot;Comparing-with-WSL2&quot;&gt;Comparing with WSL2&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Pro
-&lt;ul&gt;
-&lt;li&gt;Allow maximum performance when using physical machine&lt;/li&gt;
-&lt;li&gt;Have Native GUI which can be accessed using VirtualBox&lt;/li&gt;
-&lt;li&gt;Native disk operation performance under virtual machine&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Con
-&lt;ul&gt;
-&lt;li&gt;No app optimization and support in Windows, e.g. vscode, cuda (but vscode has ssh feature, and you have native linux cuda under physical machine)&lt;/li&gt;
-&lt;li&gt;Mapped file in RAM is not managed by Windows, naturally, thus requiring a larger RAM (Your RAM stores mapped files from both host Windows and VM Linux now)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Even
-&lt;ul&gt;
-&lt;li&gt;Other performance under windows, e.g disk operation across systems (using SMB)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h2 id="Comparing-with-WSL2">Comparing with WSL2</h2><ul><li>Pro<ul><li>Allow maximum performance when using physical machine</li><li>Have Native GUI which can be accessed using VirtualBox</li><li>Native disk operation performance under virtual machine</li></ul></li><li>Con<ul><li>No app optimization and support in Windows, e.g. vscode, cuda (but vscode has ssh feature, and you have native linux cuda under physical machine)</li><li>Mapped file in RAM is not managed by Windows, naturally, thus requiring a larger RAM (Your RAM stores mapped files from both host Windows and VM Linux now)</li></ul></li><li>Even<ul><li>Other performance under windows, e.g disk operation across systems (using SMB)</li></ul></li></ul><a id="more"></a><h2 id="Install-Linux-on-a-partition">Install Linux on a partition</h2><p>In my case I installed it on sda6, with swap on sda8. These info are later used in .vmdk creation.</p><h2 id="Optional-default-to-CLI">Optional: default to CLI</h2><p>in <code>/etc/default/grub</code></p><p>comment out</p><pre class="language-none"><code class="language-none">GRUB_CMDLINE_LINUX_DEFAULT&#x3D;&quot;quiet splash&quot;</code></pre><p>add</p><pre class="language-none"><code class="language-none">&#96;GRUB_CMDLINE_LINUX_DEFAULT&#x3D;&quot;text&quot;&#96;&#96;GRUB_GFXPAYLOAD_LINUX&#x3D;keep&#96;</code></pre><p>run</p><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> systemctl set-default multi-user.target<span class="token function">sudo</span> <span class="token function">update-grub</span></code></pre><p>to launch GUI from CLI</p><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> systemctl start graphical.target</code></pre><h2 id="Prepare-ISO-bootimage">Prepare ISO bootimage</h2><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> ~<span class="token function">mkdir</span> iso<span class="token function">mkdir</span> iso/boot<span class="token function">mkdir</span> iso/boot/grub<span class="token function">cp</span> /usr/lib/grub/i386-pc/* ~/iso/boot/grub<span class="token function">cp</span> /boot/grub/grub.cfg ~/iso/boot/grubgrub-mkrescue -o multi-user.iso ~/iso/<span class="token function">rm</span> -r ~/iso/</code></pre><p>Copy the .iso file into Windows and then reboot into Windows.</p><h2 id="Create-VirtualBox-rawdisk">Create VirtualBox rawdisk</h2><pre class="language-powershell" data-language="powershell"><code class="language-powershell"><span class="token punctuation">.</span>\VBoxManage<span class="token punctuation">.</span>exe internalcommands createrawvmdk <span class="token operator">-</span>filename <span class="token string">"C:\Users\Mark\VirtualBox VMs\Ubuntu\Ubuntu.vmdk"</span> <span class="token operator">-</span>rawdisk \\<span class="token punctuation">.</span>\PhysicalDrive0  <span class="token operator">-</span>partitions 6<span class="token punctuation">,</span>8</code></pre><p>see reference for more info.</p><p>Create the VM using the generated .vmdk file and .iso file.</p><p>Warning： misconfiguration of partition would cause severe outcome, i.e. Windows and VM Linux writing to the same partition at the same time, causing data corruption.</p><h2 id="Misc">Misc</h2><h3 id="Auto-mount">Auto mount</h3><p>edit <code>/etc/fstab</code></p><p>add <code>nofail</code> option to EFI partition since it is not available in the .vmdk and would cause a 90 sec stall during boot.</p><p>add windows drive in the following manner</p><pre class="language-none"><code class="language-none">UUID&#x3D;FC90EE0790EDC86A &#x2F;mnt&#x2F;C ntfs rw,auto,nofail,users,exec,nls&#x3D;utf8,umask&#x3D;0000,gid&#x3D;0,uid&#x3D;0,ver&#x3D;3.0            0   0UUID&#x3D;62ACB2C8ACB2964F &#x2F;mnt&#x2F;D ntfs rw,auto,nofail,users,exec,nls&#x3D;utf8,umask&#x3D;0000,gid&#x3D;0,uid&#x3D;0,ver&#x3D;3.0            0   0&#x2F;&#x2F;MK-P650RE6-W&#x2F;C      &#x2F;mnt&#x2F;c cifs rw,auto,nofail,users,exec,iocharset&#x3D;utf8,uid&#x3D;0,gid&#x3D;0,file_mode&#x3D;0777,dir_mode&#x3D;0777,credentials&#x3D;&#x2F;root&#x2F;smbcredential,vers&#x3D;3.0,noperm   0   0&#x2F;&#x2F;MK-P650RE6-W&#x2F;D      &#x2F;mnt&#x2F;d cifs rw,auto,nofail,users,exec,iocharset&#x3D;utf8,uid&#x3D;0,gid&#x3D;0,file_mode&#x3D;0777,dir_mode&#x3D;0777,credentials&#x3D;&#x2F;root&#x2F;smbcredential,vers&#x3D;3.0,noperm   0   0</code></pre><p>so that the NTFS partition can be auto mounted both in physical and virtual machine.</p><p>Note: CIFS allow case-insensitive workflow in Linux, but NTFS are not allowed. Typical issue would arise when, for instance, a .m3u playlist being played with no issue using CIFS, but not when using NTFS, depite being the same disk.</p><h3 id="Auto-path">Auto path</h3><p>Note that the NTFS drives, especially when using the VM, are mounted following the WSL convention, which is done by purpose (but not necessary). With such convention, a typical Windows Terminal Profile can be</p><pre class="language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>    <span class="token property">"guid"</span><span class="token operator">:</span> <span class="token string">"&#123;2b20defa-6769-4e3a-a793-d3da106465b8&#125;"</span><span class="token punctuation">,</span>    <span class="token property">"hidden"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Ubuntu"</span><span class="token punctuation">,</span>    <span class="token comment">//"commandline": "ssh mark@MK-P650RE6-U",</span>    <span class="token property">"commandline"</span><span class="token operator">:</span> <span class="token string">"cmd /S /V /K \"ECHO OFF &amp;&amp; FOR /F \"tokens=* USEBACKQ\" %F IN (`cd`) DO ( SET ntpath=%F) &amp; SET driveLetter=!ntpath:~0,1! &amp; FOR /f \"usebackq delims=\" %I in (`powershell \"\\\"!driveLetter!\\\".toLower()\"`) do set \"loweredDriveLetter=%~I\" &amp; SET latterHalf=!ntpath:~2! &amp; SET posixLatterHalf=!latterHalf:\\=/! &amp; SET posixpath=^'/mnt/!loweredDriveLetter:~0,-1!!posixLatterHalf:~0,-2!^' &amp; ssh mark@MK-P650RE6-U -t \"cd !posixpath!; exec $SHELL -l\"\""</span><span class="token punctuation">,</span>    <span class="token property">"colorScheme"</span> <span class="token operator">:</span> <span class="token string">"One Half Dark"</span><span class="token punctuation">,</span>    <span class="token property">"useAcrylic"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>    <span class="token property">"acrylicOpacity"</span><span class="token operator">:</span><span class="token number">0.8</span><span class="token punctuation">,</span>    <span class="token property">"fontFace"</span><span class="token operator">:</span> <span class="token string">"UbuntuMono NF"</span><span class="token punctuation">,</span>    <span class="token property">"icon"</span><span class="token operator">:</span> <span class="token string">"D:\\Users\\Mark\\Pictures\\Mark\\Data\\icon\\Ubuntu\\Ubuntu-Icon-01-16x16.png"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span></code></pre><p>where the host name is <code>MK-P650RE6-U</code> for the Linux system. In LAN, ip is required instead of name. Note that the <code>commandline</code> argument is a batch script wrapped in <code>cmd /S /V /K &quot;&quot;</code> and then escaped according to .json string format, which is essentially as following:</p><pre class="language-batch" data-language="batch"><code class="language-batch"><span class="token command"><span class="token keyword">ECHO</span> OFF</span><span class="token command"><span class="token keyword">FOR</span> <span class="token parameter attr-name">/F</span> <span class="token string">"tokens=* USEBACKQ"</span> <span class="token variable">%F</span> <span class="token keyword">IN</span> <span class="token punctuation">(</span>`cd`<span class="token punctuation">)</span> <span class="token keyword">DO</span></span> <span class="token punctuation">(</span> <span class="token command"><span class="token keyword">SET</span> <span class="token variable">ntpath</span><span class="token operator">=</span><span class="token variable">%F</span></span><span class="token punctuation">)</span><span class="token command"><span class="token keyword">SET</span> <span class="token variable">driveLetter</span><span class="token operator">=</span><span class="token variable">!ntpath:~0,1!</span></span><span class="token command"><span class="token keyword">FOR</span> <span class="token parameter attr-name">/f</span> <span class="token string">"usebackq delims="</span> <span class="token variable">%I</span> in (`powershell <span class="token string">"\"!driveLetter!\".toLower()"</span>`</span><span class="token punctuation">)</span> do set "loweredDriveLetter=%~I"<span class="token command"><span class="token keyword">SET</span> <span class="token variable">latterHalf</span><span class="token operator">=</span><span class="token variable">!ntpath:~2!</span></span><span class="token command"><span class="token keyword">SET</span> <span class="token variable">posixLatterHalf</span><span class="token operator">=</span><span class="token variable">!latterHalf:\=/!</span></span><span class="token command"><span class="token keyword">SET</span> <span class="token variable">posixpath</span><span class="token operator">=</span><span class="token operator">^</span><span class="token punctuation">'</span><span class="token operator">/</span>mnt<span class="token operator">/</span><span class="token variable">!loweredDriveLetter:~0,-1!!posixLatterHalf:~0,-2!</span><span class="token operator">^</span><span class="token punctuation">'</span></span><span class="token command"><span class="token keyword">ssh</span> mark@MK-P650RE6<span class="token parameter attr-name">-U</span> <span class="token parameter attr-name">-t</span> <span class="token string">"cd !posixpath!; exec $SHELL -l"</span></span></code></pre><p>which extracts Windows path, converts into Linux path, then launches ssh and cd into it.</p><h3 id="Auto-launch">Auto launch</h3><p>Add in Task Scheduler</p><pre class="language-batch" data-language="batch"><code class="language-batch">"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" startvm Ubuntu --type headless</code></pre><h2 id="Reference">Reference</h2><p><a href="https://www.virtualbox.org/manual/ch09.html#rawdisk" title="Chapter 9. Advanced Topics">Chapter 9. Advanced Topics</a></p><p><a href="https://lifehacker.com/how-to-dual-boot-and-virtualize-the-same-partition-on-y-493223329" title="How to Dual Boot and Virtualize the Same Partition on Your Computer">How to Dual Boot and Virtualize the Same Partition on Your Computer</a></p><p><a href="https://stackoverflow.com/questions/626533/how-can-i-ssh-directly-to-a-particular-directory/626574#626574" title="bash - How can I ssh directly to a particular directory? - Stack Overflow">bash - How can I ssh directly to a particular directory? - Stack Overflow</a></p><p><a href="https://stackoverflow.com/questions/6359820/how-to-set-commands-output-as-a-variable-in-a-batch-file/6362922#6362922" title="windows - How to set commands output as a variable in a batch file - Stack Overflow">windows - How to set commands output as a variable in a batch file - Stack Overflow</a></p><p><a href="https://ss64.com/nt/syntax-substring.html" title="variable substring - Windows CMD - SS64.com">variable substring - Windows CMD - SS64.com</a></p><p><a href="https://stackoverflow.com/questions/34713621/batch-converting-variable-to-uppercase/34723215#34723215" title="cmd - Batch - Converting variable to uppercase - Stack Overflow">cmd - Batch - Converting variable to uppercase - Stack Overflow</a></p><p><a href="https://stackoverflow.com/questions/20339341/why-can-i-not-get-a-substring-of-a-delayed-expansion-variable-in-an-if-statement/20342275#20342275" title="batch file - Why can I not get a substring of a delayed expansion variable in an if statement? - Stack Overflow">batch file - Why can I not get a substring of a delayed expansion variable in an if statement? - Stack Overflow</a></p>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/solution/">Solution</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/windows/">Windows</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/linux/">Linux</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/solution/virtualize-dual-boot-linux/#disqus_thread</comments>
       
     </item>
     

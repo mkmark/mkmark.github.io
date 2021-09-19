@@ -9,8 +9,34 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 18 Sep 2021 02:10:53 GMT</pubDate>
+    <pubDate>Sun, 19 Sep 2021 02:41:45 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Zhejiang University Network</title>
+      <link>http://www.mkmark.net/blog/misc/zhejiang-university-network/</link>
+      <guid>http://www.mkmark.net/blog/misc/zhejiang-university-network/</guid>
+      <pubDate>Sun, 19 Sep 2021 02:39:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;Had a chat with one of the local campus network admin, here is some of what I learned about the Zhejiang University network&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>Had a chat with one of the local campus network admin, here is some of what I learned about the Zhejiang University network</p><ul><li>the entire lab building is merely connected with 2 1-Gbps links</li><li>the new campus WIFI is restricted to 30 Mbps as requested by old main campus leader 'to ensure consistency'</li><li>office table network switches are trash with only 100 Mbps link speed</li><li>private router can cause DHCP problems thus DHCP should always be turned off, or they will ban the mac address</li><li>private router is against regulation as security might be breached that some connection can not be traced</li><li>all records are preserved permanently for security purpose</li><li>all connections to campus network can be traced to someone who is responsible<ul><li>common link for sure can be traced to the account that is using it</li><li>direct link (static ip) can be traced to the applicant</li><li>most, if not all, direct link is bound to the device mac address</li></ul></li><li>proxy service is detected using self developed software, through various techniques including using ip range pool</li></ul>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/misc/">Misc</category>
+      
+      
+      
+      <comments>http://www.mkmark.net/blog/misc/zhejiang-university-network/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>教师节贺词</title>
@@ -591,34 +617,6 @@ Changsha Culture and Art Center, by Zaha Hadid.&lt;/p&gt;
       
       
       <comments>http://www.mkmark.net/blog/release/blog-migration/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Chrome Dark Scroll Bar</title>
-      <link>http://www.mkmark.net/blog/solution/chrome-dark-scroll-bar/</link>
-      <guid>http://www.mkmark.net/blog/solution/chrome-dark-scroll-bar/</guid>
-      <pubDate>Sat, 30 Jan 2021 20:10:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;Chrome now supports dark scroll bar as Github has implemented. After careful search and debug I finally located 2 syntax for its implemen</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>Chrome now supports dark scroll bar as Github has implemented. After careful search and debug I finally located 2 syntax for its implementation, being:</p><p>A <code>HTML</code> <code>meta</code> tag telling Chrome supported color-schemes with preference by order. Chrome users with system-wide light/dark theme will find it respect this tag on page reload. The light theme remains what it was, while the dark theme features a default pure black background and pure white font color, with other colors like purple for hyperlinks.</p><pre class="language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>color-scheme<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>light dark<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></code></pre><p>A <code>CSS</code> property which can override previous <code>meta</code> tag and works without reloading the page</p><pre class="language-css" data-language="css"><code class="language-css"><span class="token selector">:root</span> <span class="token punctuation">&#123;</span>  <span class="token property">color-scheme</span><span class="token punctuation">:</span> dark<span class="token punctuation">;</span><span class="token punctuation">&#125;</span></code></pre><h2 id="Reference">Reference</h2><p><a href="https://web.dev/color-scheme/" title="Improved dark mode default styling with the color-scheme CSS property and the corresponding meta tag">Improved dark mode default styling with the color-scheme CSS property and the corresponding meta tag</a></p>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/solution/">Solution</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/css/">CSS</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/html/">HTML</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/solution/chrome-dark-scroll-bar/#disqus_thread</comments>
       
     </item>
     

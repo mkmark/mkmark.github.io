@@ -9,8 +9,65 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 31 Dec 2021 05:17:58 GMT</pubDate>
+    <pubDate>Sat, 22 Jan 2022 06:45:28 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>X3 - Marines, and all the sarcasm</title>
+      <link>http://www.mkmark.net/blog/game/x3-marines-and-all-the-sarcasm/</link>
+      <guid>http://www.mkmark.net/blog/game/x3-marines-and-all-the-sarcasm/</guid>
+      <pubDate>Sat, 08 Jan 2022 11:17:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;A deep discussion into the nature of development and authority, from the perspective of marines in the game X3.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://f</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>A deep discussion into the nature of development and authority, from the perspective of marines in the game X3.</p><p><a href="https://forum.egosoft.com/viewtopic.php?f=199&amp;t=444071">https://forum.egosoft.com/viewtopic.php?f=199&amp;t=444071</a></p>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/game/">Game</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/x3/">X3</category>
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/politics/">politics</category>
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/philosophy/">philosophy</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/game/x3-marines-and-all-the-sarcasm/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>X3FL - Board Q with 0 Casualty</title>
+      <link>http://www.mkmark.net/blog/game/x3fl-board-q-with-0-casualty/</link>
+      <guid>http://www.mkmark.net/blog/game/x3fl-board-q-with-0-casualty/</guid>
+      <pubDate>Fri, 31 Dec 2021 13:38:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;Boarding a Xenon Q with 0 casualty was easy in TC since one can save load at each deck. Need a little more SL in AP, but was easier than </description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>Boarding a Xenon Q with 0 casualty was easy in TC since one can save load at each deck. Need a little more SL in AP, but was easier than P IIRC. Now it's very hard, but I finally made it after 717 attempts.</p><p>So I lower the Q's shield, launch 21 marines, initiate the jump sequence, keep shields low, and save right before boarding pods hit Q. After each reload, once the jump is completed, I open the property menu to watch the marine status, take a screenshot at the hacking stage, save the game, and copy the save to somewhere else.</p><p>I wrote a .ahk script to automate the above process, gathering a lot of saves and corresponding screenshots. The screenshots are later processed and clustered using python.</p><p>Of all the 793 scenarios recorded, 101 times Q launched a Firestorm Torpedo against me but ironically destroyed itself due to close-range detonation by my anti-missile system.</p><p>Of the remaining 692 scenarios, 447 times the marines did not survive till hacking the core. The other 245 (almost) successful scenarios have a distribution of remaining crews as follows at the hacking stage. Note there are occasions when less than 16 marines made it to this stage but were not eliminated.</p><p><img src="/content/uploads/202112311304-x3fl-boarding-q-survivor-distribution.jpg" alt=""></p><p>Only in one scenario, at the 717th attempt, did all 21 crews survive the operation.</p><p><img src="/content/uploads/X3FL-2021-12-31-05-53-21-15.jpg" alt=""></p>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/game/">Game</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/x3/">X3</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/game/x3fl-board-q-with-0-casualty/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Autarky</title>
@@ -556,64 +613,6 @@ resolution of 0.8m&lt;br&gt;
       
       
       <comments>http://www.mkmark.net/blog/learn/the-2nd-civil-engineering-computing-and-simulation-technology-academic-conference/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Changsha Trip</title>
-      <link>http://www.mkmark.net/blog/travel/changsha-trip/</link>
-      <guid>http://www.mkmark.net/blog/travel/changsha-trip/</guid>
-      <pubDate>Sun, 09 May 2021 12:59:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;&lt;img src=&quot;/content/uploads/20210509-True-Fans-scaled.jpg&quot; alt=&quot;True Fans&quot;&gt;&lt;br&gt;
-Changsha Culture and Art Center, by Zaha Hadid.&lt;/p&gt;
-&lt;p&gt;A t</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p><img src="/content/uploads/20210509-True-Fans-scaled.jpg" alt="True Fans"><br>Changsha Culture and Art Center, by Zaha Hadid.</p><p>A true fans sees him everywhere.</p><p><img src="/content/uploads/20210509-College-of-Civil-Engineering-Hunan-University-scaled.jpg" alt="20210509 College of Civil Engineering, Hunan University"></p><p>Odd enough, the metro exit reads 'College of Civil Engineering, Hunan University' instead of just 'Hunan University', despite the entire campus is just outside of the exit and College of Civil Engineering is the one most far from the exit.</p>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/travel/">Travel</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/civil-engineering/">civil engineering</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/travel/changsha-trip/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Project: Glubam Building</title>
-      <link>http://www.mkmark.net/blog/work/project-glubam-building/</link>
-      <guid>http://www.mkmark.net/blog/work/project-glubam-building/</guid>
-      <pubDate>Wed, 07 Apr 2021 17:21:00 GMT</pubDate>
-      
-      <description>&lt;p&gt;A &lt;strong&gt;real&lt;/strong&gt; glubam project to be built in Changsha, Hunan, China.&lt;/p&gt;
-&lt;p&gt;It will be the &lt;strong&gt;first glubam&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; multistory office building in the world&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;It is also my first calculation &lt;strong&gt;completely done in python. &lt;a href=&quot;/content/uploads/202106012045-Calculation.html&quot;&gt;The code can be found here&lt;/a&gt;&lt;/strong&gt;, in Chinese. You&#39;re always welcome to use google translate though.&lt;/p&gt;
-&lt;h2 id=&quot;Architecture&quot;&gt;Architecture&lt;/h2&gt;
-&lt;p&gt;The current accepted architecture proposal is&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://wordpress.mkmark.net/content/uploads/20210408-Glubam-Building-4.6-2.jpg&quot; alt=&quot;20210408 Glubam Building 4.6-2&quot;&gt;&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>A <strong>real</strong> glubam project to be built in Changsha, Hunan, China.</p><p>It will be the <strong>first glubam<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> multistory office building in the world</strong>.</p><p>It is also my first calculation <strong>completely done in python. <a href="/content/uploads/202106012045-Calculation.html">The code can be found here</a></strong>, in Chinese. You're always welcome to use google translate though.</p><h2 id="Architecture">Architecture</h2><p>The current accepted architecture proposal is</p><p><img src="http://wordpress.mkmark.net/content/uploads/20210408-Glubam-Building-4.6-2.jpg" alt="20210408 Glubam Building 4.6-2"></p><a id="more"></a><p><img src="http://wordpress.mkmark.net/content/uploads/20210408-Glubam-Building-4.6-10.jpg" alt="20210408 Glubam Building 4.6-10"></p><p>Completely parametrically modeled in Grasshopper.</p><p>Will possibly rebuild in Revit in near future, for practise purpose and engineering planning.</p><h2 id="Engineering">Engineering</h2><p><a href="/content/uploads/202106012045-Calculation.html">Calculation</a> is done by python (in Chinese, but you are always welcome to use google translate) and SAP2000.</p><p>The blueprint is exported from Rhino-Grasshopper, and dimensioned by Autodesk CAD (To be updated).</p><h2 id="Credits">Credits</h2><p>Directed by Prof. Yan Xiao.</p><p>Designed by Mark Ma.</p><p>Non-commercial project for research and demo purpose.</p><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>Wu, Y., and Y. Xiao. &quot;Steel and glubam hybrid space truss.&quot; Engineering Structures 171 (2018): 140-153. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/work/">Work</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/civil-engineering/">civil engineering</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/grasshopper/">Grasshopper</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/work/project-glubam-building/#disqus_thread</comments>
       
     </item>
     

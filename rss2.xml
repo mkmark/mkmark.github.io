@@ -9,8 +9,37 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 28 Feb 2022 02:20:42 GMT</pubDate>
+    <pubDate>Tue, 01 Mar 2022 16:08:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>乌克兰局势</title>
+      <link>http://www.mkmark.net/blog/life/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/</link>
+      <guid>http://www.mkmark.net/blog/life/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/</guid>
+      <pubDate>Tue, 01 Mar 2022 16:03:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;2022-03-01&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;俄罗斯把乌克兰北东南三面合围以后不动了。既不合拢口袋，也不攻城。说明俄罗斯不着急。西乌部队肯定不会往口袋里钻，那无异于自杀。东乌政府军正面没有打赢的可能，长期来看除了撤退就是投降，没有别的选择。&lt;/li&gt;
+&lt;li&gt;俄罗斯没有切</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>2022-03-01</p><ol><li>俄罗斯把乌克兰北东南三面合围以后不动了。既不合拢口袋，也不攻城。说明俄罗斯不着急。西乌部队肯定不会往口袋里钻，那无异于自杀。东乌政府军正面没有打赢的可能，长期来看除了撤退就是投降，没有别的选择。</li><li>俄罗斯没有切断乌西南即波兰罗马尼亚边境，甚至都没往西乌进军，尤其是北约武器现在在往西乌不断输送的情况下，说明俄对西乌没有任何兴趣。</li><li>表面上和乌克兰谈判但完全不停军事行动，说明俄罗斯没达到预期目标。</li><li>很多人说乌克兰会变成下一个阿富汗，我看未必。乌克兰地形缺乏打游击的条件，大平原重武器的对抗游击队根本活不了。乌克兰有抵抗意志但目前远没到阿富汗的血海深仇。</li></ol><p>综合以上，俄罗斯在等乌东政府军撤离或者投降，把乌东自愿空出来。东西乌分治。剥离了重工业的西乌实际上失去了独立军事化的能力。东乌有亲俄文化和传统，扶持亲俄政府（可以就像现在这样打散）；泽连斯基留在西乌。保留西乌是乌克兰民族分布导致的必然结果。</p><p>如果说前24小时的突进是希望乌克兰政府立即奔溃，那显然没达到目的，但不代表军事行动就没有意义了。目前还要打的是东西乌的分界线和对西乌停火的条件。</p><ol><li>是否承认东乌各国独立</li><li>是否承诺永不入欧，永不入北约</li><li>是否承诺去军事化</li></ol><p>东西乌分治后其实上述三个条件都不重要了，很有可能西乌一个都不会答应，继续要求加入欧盟北约。考虑到届时东西乌互为对方阵营缓冲带，西乌加入欧盟北约是真的有可能的。</p>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/life/">Life</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/politics/">politics</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/life/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Ukraine War</title>
@@ -588,34 +617,6 @@ resolution of 0.8m&lt;br&gt;
       
       
       <comments>http://www.mkmark.net/blog/release/project-zju-health-reporter/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Project: Prefabricated Engineered Bamboo Mobile House - BIM Modeling</title>
-      <link>http://www.mkmark.net/blog/work/project-prefabricated-engineered-bamboo-mobile-house-bim-modeling/</link>
-      <guid>http://www.mkmark.net/blog/work/project-prefabricated-engineered-bamboo-mobile-house-bim-modeling/</guid>
-      <pubDate>Sun, 30 May 2021 08:15:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;Glubam is short for glue laminated bamboo, which is a new material&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>Glubam is short for glue laminated bamboo, which is a new material<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p><p>This is the BIM modeling project for a new code: Technical specification for prefabricated engineered bamboo mobile house.</p><video autoplay loop muted>    <source type="video/mp4" src="/content/uploads/Prefabricated-Engineered-Bamboo-Mobile-House-BIM-Modeling-1.2.1.mp4" /></video><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p>Wu, Y., and Y. Xiao. &quot;Steel and glubam hybrid space truss.&quot; Engineering Structures 171 (2018): 140-153. <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/work/">Work</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/civil-engineering/">civil engineering</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/grasshopper/">Grasshopper</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/work/project-prefabricated-engineered-bamboo-mobile-house-bim-modeling/#disqus_thread</comments>
       
     </item>
     

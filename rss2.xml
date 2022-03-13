@@ -9,7 +9,7 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 13 Mar 2022 12:40:17 GMT</pubDate>
+    <pubDate>Sun, 13 Mar 2022 13:09:24 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,17 +18,29 @@
       <guid>http://www.mkmark.net/blog/release/rss-news/</guid>
       <pubDate>Sun, 13 Mar 2022 12:06:00 GMT</pubDate>
       
-        
-        
       <description>&lt;h2 id=&quot;why-rss&quot;&gt;why rss&lt;/h2&gt;
 &lt;p&gt;rss is the best solution to aggregate news with the advantages of being&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;free, no ads, no track</description>
-        
+&lt;li&gt;free, no ads, no tracking, no targeting&lt;/li&gt;
+&lt;li&gt;highly customizable&lt;/li&gt;
+&lt;li&gt;across platform&lt;/li&gt;
+&lt;li&gt;decentralized&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In short, by using rss we can choose sources rather than being targeted by algorithms with ads and propaganda.&lt;/p&gt;
+&lt;h2 id=&quot;feed&quot;&gt;feed&lt;/h2&gt;
+&lt;h3 id=&quot;tool&quot;&gt;tool&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/mkmark/RSSHub&quot;&gt;mkmark/RSSHub&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;source&quot;&gt;source&lt;/h3&gt;
+&lt;p&gt;The guideline is to choose from most unbiased media, i.e. Reuters and AP. Their positional (western) bias is then offset using TASS and 人民网 for voices from Russia and China.&lt;/p&gt;
+&lt;p&gt;This strategy covers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4 of the 5 UN security council members, with the exception of France&lt;/li&gt;
+&lt;li&gt;3 of the 5 larget news agencies, with the exception of UPI which is yet another US news agency, and Agence France-Presse which does not provide mature english content.&lt;/li&gt;
+&lt;/ul&gt;</description>
       
       
       
-      <content:encoded><![CDATA[<h2 id="why-rss">why rss</h2><p>rss is the best solution to aggregate news with the advantages of being</p><ul><li>free, no ads, no tracking, no targeting</li><li>highly customizable</li><li>across platform</li><li>decentralized</li></ul><p>In short, by using rss we can choose sources rather than being targeted by algorithms with ads and propaganda.</p><h2 id="feed">feed</h2><h3 id="tool">tool</h3><p>https://github.com/DIYgod/RSSHub/<br>https://github.com/mkmark/RSSHub</p><h3 id="source">source</h3><p>The guideline is to choose from most unbiased media, i.e. Reuters and AP. Their positional (western) bias is then offset using TASS and 人民网 for voices from Russia and China.</p><p>This strategy covers:</p><ul><li>4 of the 5 UN security council members, with the exception of France</li><li>3 of the 5 larget news agencies, with the exception of UPI which is yet another US news agency, and Agence France-Presse which does not provide mature english content.</li></ul><h4 id="Reuters">Reuters</h4><p>source</p><p>https://www.reuters.com/:section/</p><p>route</p><p>https://rss.mkmark.net/reuters/:section</p><p>example: world</p><p>https://rss.mkmark.net/reuters/world</p><h4 id="AP">AP</h4><p>source</p><p>https://apnews.com/hub/:section</p><p>route</p><p>https://rss.mkmark.net/apnews/hub/:section</p><p>example: world-news</p><p>https://rss.mkmark.net/apnews/hub/world-news</p><h4 id="人民网">人民网</h4><p>doc</p><p>https://docs.rsshub.app/traditional-media.html#ren-min-wang</p><p>example</p><p>https://rss.mkmark.net/people</p><h4 id="TASS">TASS</h4><p>source</p><p>https://tass.com/:section</p><p>route</p><p>https://rss.mkmark.net/tass/en/:section</p><p>example: world</p><p>https://rss.mkmark.net/tass/en/world</p><h3 id="client-app">client app</h3><h4 id="Windows">Windows</h4><h5 id="Newsflow">Newsflow</h5><ul><li>free on Microsoft Store</li></ul><h4 id="Android">Android</h4><h5 id="News">News</h5><ul><li>free on F-Droid</li><li>open source https://github.com/bubelov/news</li></ul><h5 id="Pluma">Pluma</h5><ul><li>free on Google Play Store</li></ul>]]></content:encoded>
+      <content:encoded><![CDATA[<h2 id="why-rss">why rss</h2><p>rss is the best solution to aggregate news with the advantages of being</p><ul><li>free, no ads, no tracking, no targeting</li><li>highly customizable</li><li>across platform</li><li>decentralized</li></ul><p>In short, by using rss we can choose sources rather than being targeted by algorithms with ads and propaganda.</p><h2 id="feed">feed</h2><h3 id="tool">tool</h3><p><a href="https://github.com/mkmark/RSSHub">mkmark/RSSHub</a></p><h3 id="source">source</h3><p>The guideline is to choose from most unbiased media, i.e. Reuters and AP. Their positional (western) bias is then offset using TASS and 人民网 for voices from Russia and China.</p><p>This strategy covers:</p><ul><li>4 of the 5 UN security council members, with the exception of France</li><li>3 of the 5 larget news agencies, with the exception of UPI which is yet another US news agency, and Agence France-Presse which does not provide mature english content.</li></ul><a id="more"></a><h4 id="Reuters">Reuters</h4><p>source</p><p><code>https://www.reuters.com/:section/</code></p><p>route</p><p><code>https://rss.mkmark.net/reuters/:section</code></p><p>example: world</p><p><code>https://rss.mkmark.net/reuters/world</code></p><h4 id="AP">AP</h4><p>source</p><p><code>https://apnews.com/hub/:section</code></p><p>route</p><p><code>https://rss.mkmark.net/apnews/hub/:section</code></p><p>example: world-news</p><p><code>https://rss.mkmark.net/apnews/hub/world-news</code></p><h4 id="人民网">人民网</h4><p>doc</p><p><code>https://docs.rsshub.app/traditional-media.html#ren-min-wang</code></p><p>example</p><p><code>https://rss.mkmark.net/people </code></p><h4 id="TASS">TASS</h4><p>source</p><p><code>https://tass.com/:section</code></p><p>route</p><p><code>https://rss.mkmark.net/tass/en/:section</code></p><p>example: world</p><p><code>https://rss.mkmark.net/tass/en/world</code></p><h3 id="client-app">client app</h3><h4 id="Windows">Windows</h4><h5 id="Newsflow">Newsflow</h5><ul><li>free on Microsoft Store</li></ul><h4 id="Android">Android</h4><h5 id="News">News</h5><ul><li>free on F-Droid</li><li><a href="https://github.com/bubelov/news">open source</a></li></ul><h5 id="Pluma">Pluma</h5><ul><li>free on Google Play Store</li></ul>]]></content:encoded>
       
       
       <category domain="http://www.mkmark.net/archive/by-category/release/">Release</category>

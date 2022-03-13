@@ -9,13 +9,75 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 01 Mar 2022 16:08:19 GMT</pubDate>
+    <pubDate>Sun, 13 Mar 2022 12:13:11 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
+      <title>rss news</title>
+      <link>http://www.mkmark.net/blog/release/rss-news/</link>
+      <guid>http://www.mkmark.net/blog/release/rss-news/</guid>
+      <pubDate>Sun, 13 Mar 2022 12:06:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;why-rss&quot;&gt;why rss&lt;/h2&gt;
+&lt;p&gt;rss is the best solution to aggregate news with the advantages of being&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;free, no ads, no track</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="why-rss">why rss</h2><p>rss is the best solution to aggregate news with the advantages of being</p><ul><li>free, no ads, no tracking, no targeting</li><li>highly customizable</li><li>across platform</li><li>decentralized</li></ul><p>In short, by using rss we can choose sources rather than being targeted by algorithms with ads and propaganda.</p><h2 id="feed">feed</h2><h3 id="tool">tool</h3><p>https://github.com/DIYgod/RSSHub/<br>https://github.com/mkmark/RSSHub</p><h3 id="source">source</h3><p>The guideline is to choose from most unbiased media, i.e. Reuters and AP. Their positional (western) bias is then offset using TASS and 人民网 for voices from Russia and China.</p><p>This strategy covers:</p><ul><li>4 of the 5 UN security council members, with the exception of France</li><li>3 of the 5 larget news agencies, with the exception of UPI which is yet another US news agency, and Agence France-Presse which does not provide mature english content.</li></ul><h4 id="Reuters">Reuters</h4><p>source</p><p>https://www.reuters.com/:section/</p><p>route</p><p>https://rss.mkmark.net/reuters/:section</p><p>example: world</p><p>https://rss.mkmark.net/reuters/world</p><h4 id="AP">AP</h4><p>source</p><p>https://apnews.com/hub/:section</p><p>route</p><p>https://rss.mkmark.net/apnews/hub/:section</p><p>example: world-news</p><p>https://rss.mkmark.net/apnews/hub/world-news</p><h4 id="人民网">人民网</h4><p>doc</p><p>https://docs.rsshub.app/traditional-media.html#ren-min-wang</p><p>example</p><p>https://rss.mkmark.net/people</p><h4 id="TASS">TASS</h4><p>source</p><p>https://tass.com/:section</p><p>route</p><p>https://rss.mkmark.net/tass/en/:section</p><p>example: world</p><p>https://rss.mkmark.net/tass/en/world</p><h3 id="client-app">client app</h3><h4 id="Windows">Windows</h4><h5 id="Newsflow">Newsflow</h5><ul><li>free on Microsoft Store</li></ul><h4 id="Android">Android</h4><h5 id="News">News</h5><ul><li>free on F-Droid</li><li>open source https://github.com/bubelov/news</li></ul><h5 id="Pluma">Pluma</h5><ul><li>free on Google Play Store</li></ul>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/release/">Release</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/javascript/">JavaScript</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/release/rss-news/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>诽谤公关</title>
+      <link>http://www.mkmark.net/blog/misc/%E8%AF%BD%E8%B0%A4%E5%85%AC%E5%85%B3/</link>
+      <guid>http://www.mkmark.net/blog/misc/%E8%AF%BD%E8%B0%A4%E5%85%AC%E5%85%B3/</guid>
+      <pubDate>Thu, 10 Mar 2022 08:17:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;六子吃了两碗粉 - 让子弹飞&lt;br&gt;
+伊拉克有生化武器 - US Congress&lt;br&gt;
+新疆维吾尔族强迫劳动 - US Gov&lt;br&gt;
+武汉病毒研究所制造新冠病毒 - US Gov&lt;br&gt;
+中国要求俄罗斯奥运会结束再开战 - NY Times&lt;/p&gt;
+&lt;h2 id=&quot;宣</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>六子吃了两碗粉 - 让子弹飞<br>伊拉克有生化武器 - US Congress<br>新疆维吾尔族强迫劳动 - US Gov<br>武汉病毒研究所制造新冠病毒 - US Gov<br>中国要求俄罗斯奥运会结束再开战 - NY Times</p><h2 id="宣传系统">宣传系统</h2><p>利益方 - 枪手 - 媒体 - 缺乏判断力的群众</p><p>缺乏判断力的群众是社会现状，历史，以及可见未来内的必然特点，参《乌合之众》</p><p>特朗普当选是这个宣传系统反噬的一个案例，双方采取互相污蔑等流氓手段直接降低了整个美国行政系统的公信力和执行效率，并在处理2021年美国国会大厦遭冲击事件中开了言论管控的先河，违背了宪法第二修正案，降低了整个美国自由价值观的道德水平</p><p>乌克兰战争中不得不再次采取言论管控应对敌对阵营的宣传系统诽谤/合理怀疑</p><h2 id="诽谤公关">诽谤公关</h2><p>困难在于成本的不对称即控方成本显著低于辩方，效果的不对称即控方先入为主的优势。</p><ul><li>无视<br>成本最低，有刻意回避的负面效果</li><li>简单否认<br>成本极低，效果一般。</li><li>要求控方拿出切实有效的证据<br>抬升控方成本，转移焦点</li><li>允许控方调查<br>成本不可控且毫无意义</li><li>有公共认可的第三方，允许第三方调查<br>成本偏高，抬升控方成本，效果一般但通常能较为长期地解决问题</li><li>反向污蔑/合理怀疑<br>成本偏高，降低自身道德标准，丧失公信力</li><li>揭露控方诽谤的本质<br>成本取决于控方诽谤的水平，需要发掘控方犯下的错误，长期来看能降低控方公信力</li><li>引诱控方犯下低级错误的诽谤<br>难度极高，钓鱼执法</li></ul><h2 id="案例">案例</h2><h3 id="外交部发言人就美方签署所谓-“维吾尔强迫劳动预防法案”发表谈话"><a href="https://www.fmprc.gov.cn/web/fyrbt_673021/202112/t20211224_10475186.shtml">外交部发言人就美方签署所谓 “维吾尔强迫劳动预防法案”发表谈话</a></h3><p>2021-12-24 08:46</p><p>当地时间12月23日，美方将所谓“维吾尔强迫劳动预防法案”签署成法。该案罔顾事实真相，恶意诋毁中国新疆人权状况，严重违反国际法和国际关系基本准则，粗暴干涉中国内政，中方对此表示强烈愤慨、坚决反对。</p><p>所谓新疆地区存在“强迫劳动”和“种族灭绝”，完全是反华势力炮制的恶毒谎言。新疆经济发展和社会安定举世公认，各族人民安居乐业有目共睹。美方反复借涉疆问题造谣生事，实质是打着人权的幌子搞政治操弄和经济霸凌，企图破坏新疆繁荣稳定、遏制中国发展。</p><p>美国自身劣迹斑斑，就人权问题指责抹黑中国是滑天下之大稽。美国是贩卖人口和强迫劳动的重灾区，近5年来每年被贩卖到美国从事强迫劳动的人口多达10万。美国历史上对印第安原住民犯下的反人类罪行早已构成事实上的“种族灭绝”。“强迫劳动”和“种族灭绝”这两顶帽子还是美国留着自己戴最合适。</p><p>涉疆问题根本不是人权问题，而是反暴恐和反分裂问题。中方正告美方，利用涉疆问题搞阴谋诡计，阻挡不了新疆各族人民追求美好生活的坚定步伐，阻挡不了中国不断发展壮大。美方行径完全违背市场规则和商业道德，只会破坏全球产业链供应链稳定，扰乱国际贸易秩序，损害美自身利益和国家信誉，纯属搬起石头砸自己的脚。</p><p>我要再次强调，涉疆事务纯属中国内政。中国政府和人民捍卫国家主权、安全和发展利益的决心坚定不移。我们奉劝美方立即纠正错误，停止利用涉疆问题散布谎言、干涉中国内政、遏制中国发展。中方将视形势发展作进一步反应。</p><h3 id="驻美国使馆就美发布所谓“新冠病毒溯源报告”发表声明"><a href="https://www.fmprc.gov.cn/ce/ceus/chn/sgzhichuang/t1902645.htm">驻美国使馆就美发布所谓“新冠病毒溯源报告”发表声明</a></h3><p>2021/08/28<br>　　8月27日，美国国家情报总监办公室发布所谓“新冠病毒溯源调查报告”要点，认为目前看新冠病毒源自自然界和实验室泄漏的两种可能性都不能排除。报告诬蔑中方阻挠国际调查、拒绝共享信息并指责他国。白宫同日就新冠病毒溯源调查发布声明，妄称中方阻挠溯源工作的国际调查，缺乏透明度，企图纠集有关伙伴方对中方施压。中方对此坚决反对、强烈谴责。</p><p>首先，报告是美由情报部门主导杜撰的，毫无科学性和可信度可言。新冠病毒溯源是科学问题，应该也只能由科学家而不是情报专家研究。历史上，美情报部门搞出不少“杰作”，诸如把一小瓶洗衣粉当作伊拉克大规模杀伤性武器证据，自导自演“白头盔”组织摆拍所谓“叙利亚化学武器袭击”视频。现在美方又故技重施，放着中国—世卫组织联合研究报告不信，偏要取信情报部门炮制的报告，那怎么还可能是科学、可靠的溯源？</p><p>第二，美方声称中方不透明，这完全是为其推动政治化、污名化寻找借口。疫情发生以来，中方始终本着公开、透明、负责任原则，第一时间对外介绍、对外分享病毒基因序列、对外开展抗疫合作。2019年12月27日，武汉地方有关部门首次报告可疑病例，30日下发关于做好不明原因肺炎救治工作的紧急通知，31日中国向世卫组织通报有关情况，2020年1月3日中方开始定期向世卫组织和美国等有关国家主动通报疫情信息。在溯源问题上，中方也从一开始就表明了科学、专业、严肃和负责任的态度，率先同世卫组织开展全球溯源合作，去年以来两次邀请世卫专家来华开展溯源研究。世卫专家组来华开展溯源工作时，中方完全公开透明，满足了其全部参访要求，未作任何限制。专家们在武汉去了所有他们想去的地方，会见了所有他们想见的人，查看了所有他们想看的资料。世卫组织3月30日正式发布的中国—世卫组织联合研究报告，其形成遵循了世卫组织程序，采取了科学方法，体现了权威性和科学性。中方在病毒溯源问题上展现的开放、透明态度也得到国际专家充分肯定。</p><p>第三，美方情报部门出台报告恰恰说明了美方一意孤行在政治操弄的错误道路上越走越远。疫情暴发以来，美国成为感染和死亡人数最多的国家，已经让美国民众付出了沉重代价。美国政府通过情报机构搞所谓溯源报告，妄图对中国进行“有罪推定”，是为了推卸自身抗疫失败责任、向中国甩锅推责。美方这种做法只会对国际溯源和全球抗疫合作造成干扰和破坏，已经遭到国际社会普遍反对。世界上100多个国家和地区，300多个政党、社会组织和智库向世卫组织秘书处提交《联合声明》，坚决反对将溯源问题政治化。美方难道不应该听一听这些声音吗？</p><p>最后，美方对自身溯源讳莫如深，把溯源大门关得死死的。美方如果真的“透明负责”，就该公布并检测早期病例数据。美国新冠肺炎疫情发生的时间线不断前移。美国至少有五个州的新冠病毒感染情况早于美国首例确诊病例报告时间。近日也有美国媒体报道，美国首例新冠肺炎死亡病例出现的时间为2020年1月初，比官方此前认定的2月初要早数周。</p><p>武汉病毒研究所已两次接待世卫组织专家，新冠病毒源自武汉病毒研究所泄漏“极不可能”是中国—世卫组织联合研究报告得出的明确结论。美方如果非要坚持实验室泄漏的说法，难道不应该邀请世卫组织专家前往德特里克堡和北卡罗来纳大学调查吗？德堡长期从事冠状病毒研究、改造，2019年发生严重安全事故并被关停，随后美国国内暴发与新冠肺炎症状相似的疾病。北卡大学巴里克团队早就具备极其成熟的冠状病毒合成及改造能力，该校于2015年1月至2020年6月1日共向美国国立卫生研究院报告28起涉及基因工程微生物的安全事故，其中6起涉及包括SARS、MERS和新冠病毒等在内的冠状病毒。美方不调查公布自家实验室的情况，却光顾着往别人身上泼脏水。</p><p>中方对全球溯源问题的立场是一贯、明确的。溯源是科学问题，中方始终支持并将继续参加科学溯源。我们反对的是政治操弄，反对的是有罪推定，反对的是嫁祸于人。第二阶段溯源应该在第一阶段溯源的基础上全面延伸，在全球多国多地开展溯源工作，才能真正找到真相和答案。</p><p>美情报部门提供的报告没有给出美方想要的确切答案，再搞下去，也是竹篮打水一场空，因为它的调查本身就是子虚乌有、反科学的。</p>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/misc/">Misc</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/government/">government</category>
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/society/">society</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/misc/%E8%AF%BD%E8%B0%A4%E5%85%AC%E5%85%B3/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>乌克兰局势</title>
-      <link>http://www.mkmark.net/blog/life/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/</link>
-      <guid>http://www.mkmark.net/blog/life/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/</guid>
+      <link>http://www.mkmark.net/blog/misc/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/</link>
+      <guid>http://www.mkmark.net/blog/misc/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/</guid>
       <pubDate>Tue, 01 Mar 2022 16:03:00 GMT</pubDate>
       
         
@@ -31,13 +93,13 @@
       <content:encoded><![CDATA[<p>2022-03-01</p><ol><li>俄罗斯把乌克兰北东南三面合围以后不动了。既不合拢口袋，也不攻城。说明俄罗斯不着急。西乌部队肯定不会往口袋里钻，那无异于自杀。东乌政府军正面没有打赢的可能，长期来看除了撤退就是投降，没有别的选择。</li><li>俄罗斯没有切断乌西南即波兰罗马尼亚边境，甚至都没往西乌进军，尤其是北约武器现在在往西乌不断输送的情况下，说明俄对西乌没有任何兴趣。</li><li>表面上和乌克兰谈判但完全不停军事行动，说明俄罗斯没达到预期目标。</li><li>很多人说乌克兰会变成下一个阿富汗，我看未必。乌克兰地形缺乏打游击的条件，大平原重武器的对抗游击队根本活不了。乌克兰有抵抗意志但目前远没到阿富汗的血海深仇。</li></ol><p>综合以上，俄罗斯在等乌东政府军撤离或者投降，把乌东自愿空出来。东西乌分治。剥离了重工业的西乌实际上失去了独立军事化的能力。东乌有亲俄文化和传统，扶持亲俄政府（可以就像现在这样打散）；泽连斯基留在西乌。保留西乌是乌克兰民族分布导致的必然结果。</p><p>如果说前24小时的突进是希望乌克兰政府立即奔溃，那显然没达到目的，但不代表军事行动就没有意义了。目前还要打的是东西乌的分界线和对西乌停火的条件。</p><ol><li>是否承认东乌各国独立</li><li>是否承诺永不入欧，永不入北约</li><li>是否承诺去军事化</li></ol><p>东西乌分治后其实上述三个条件都不重要了，很有可能西乌一个都不会答应，继续要求加入欧盟北约。考虑到届时东西乌互为对方阵营缓冲带，西乌加入欧盟北约是真的有可能的。</p>]]></content:encoded>
       
       
-      <category domain="http://www.mkmark.net/archive/by-category/life/">Life</category>
+      <category domain="http://www.mkmark.net/archive/by-category/misc/">Misc</category>
       
       
       <category domain="http://www.mkmark.net/archive/by-tag/politics/">politics</category>
       
       
-      <comments>http://www.mkmark.net/blog/life/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/#disqus_thread</comments>
+      <comments>http://www.mkmark.net/blog/misc/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/#disqus_thread</comments>
       
     </item>
     
@@ -561,62 +623,6 @@ resolution of 0.8m&lt;br&gt;
       
       
       <comments>http://www.mkmark.net/blog/learn/the-complexity-of-humanity/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Project: X3FL dynamic relationships</title>
-      <link>http://www.mkmark.net/blog/game/project-x3fl-dynamic-relationships/</link>
-      <guid>http://www.mkmark.net/blog/game/project-x3fl-dynamic-relationships/</guid>
-      <pubDate>Mon, 07 Jun 2021 11:04:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/mkmark/X3FL-dynamic-relationships&quot;&gt;mkmark/X3FL-dynamic-relationships&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&quot;https://raw.githubuserc</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p><a href="https://github.com/mkmark/X3FL-dynamic-relationships">mkmark/X3FL-dynamic-relationships</a></p><div id="https://raw.githubusercontent.com/mkmark/X3FL-dynamic-relationships/main/README.md"></div><script type="text/javascript">parseMd("https://raw.githubusercontent.com/mkmark/X3FL-dynamic-relationships/main/README.md")</script>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/game/">Game</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/x3/">X3</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/python/">Python</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/game/project-x3fl-dynamic-relationships/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Project: zju-health-reporter</title>
-      <link>http://www.mkmark.net/blog/release/project-zju-health-reporter/</link>
-      <guid>http://www.mkmark.net/blog/release/project-zju-health-reporter/</guid>
-      <pubDate>Mon, 31 May 2021 12:53:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/mkmark/netease-cloudmusic-playlist-exporter&quot;&gt;mkmark/zju-health-reporter&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&quot;https://raw.githubus</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p><a href="https://github.com/mkmark/netease-cloudmusic-playlist-exporter">mkmark/zju-health-reporter</a></p><div id="https://raw.githubusercontent.com/mkmark/zju-health-reporter/master/README.md"></div><script type="text/javascript">parseMd("https://raw.githubusercontent.com/mkmark/zju-health-reporter/master/README.md")</script>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/release/">Release</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/python/">Python</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/release/project-zju-health-reporter/#disqus_thread</comments>
       
     </item>
     

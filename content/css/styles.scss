@@ -1,0 +1,51 @@
+// base
+[data-color-mode="light"] {
+  color-scheme: light;
+}
+[data-color-mode="dark"] {
+  color-scheme: dark;
+}
+
+// prism
+[data-color-mode="light"] {
+  @import "prism-github";
+}
+[data-color-mode="dark"] {
+  @import "prism-onedark";
+}
+
+// markdown
+[data-color-mode]{
+  @import "github-markdown";
+}
+[data-color-mode="light"] {
+  @import "github-markdown-light";
+}
+[data-color-mode="dark"] {
+  @import "github-markdown-dark";
+  @import "github-markdown-dark-yellow";
+}
+
+// sidebar
+[data-color-mode]{
+  @import "sidebar";
+}
+[data-color-mode="dark"] {
+  @import "sidebar-dark";
+}
+
+//consent
+[data-color-mode]{
+  @import "consent";
+}
+[data-color-mode="dark"] {
+  @import "consent-dark";
+}
+
+//misc
+[data-color-mode] {
+  @import "mk";
+}
+[data-color-mode="dark"] {
+  @import "mk-dark";
+}

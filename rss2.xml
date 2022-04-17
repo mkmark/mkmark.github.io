@@ -9,8 +9,37 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 13 Apr 2022 07:27:00 GMT</pubDate>
+    <pubDate>Sun, 17 Apr 2022 11:28:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Proxy summary</title>
+      <link>http://www.mkmark.net/blog/misc/proxy-summary/</link>
+      <guid>http://www.mkmark.net/blog/misc/proxy-summary/</guid>
+      <pubDate>Sun, 17 Apr 2022 05:57:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;by-tools&quot;&gt;by tools&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;v2fly/v2ray-core: secure proxy, balancer, router
+&lt;ul&gt;
+&lt;li&gt;Qv2ray/Qv2ray: v2ray gui for pc&lt;/li&gt;
+&lt;li&gt;</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="by-tools">by tools</h2><ul><li>v2fly/v2ray-core: secure proxy, balancer, router<ul><li>Qv2ray/Qv2ray: v2ray gui for pc</li><li>2dust/v2rayNG: v2ray gui for android</li></ul></li><li>ntop/n2n: virtual LAN adaptor</li><li>alexkirsz/dispatch-proxy: adaptor combiner</li><li>nginx/nginx: server side http proxy, http reverse proxy, http port reuse</li><li>haad/proxychains: proxy chains, socks-&gt;app, for pc</li><li>proxifier: proxy chains, socks-&gt;app, for windows</li><li>ambrop72/badvpn/tun2socks: socks-&gt;adaptor</li><li>torproject/tor,tpo/applications/tor-browser: anonymous http</li><li>FelisCatus/SwitchyOmega: socks,http-&gt;browser</li></ul><h2 id="by-application-senario">by application senario</h2><h3 id="bypass-GFW-with-server-port-access">bypass GFW with server port access</h3><p>v2fly/v2ray-core: vmess+ws+tls-&gt;socks5, balancer, multiple domain cdn servers for acceleration and camouflage</p><h3 id="bypass-campus-Internet-outbound-speed-limit-campus-has-no-LAN-speed-limit">bypass campus Internet outbound speed limit (campus has no LAN speed limit)</h3><h4 id="has-LAN-servers-with-port-access">has LAN servers with port access</h4><p>v2fly/v2ray-core: vmess+ws-&gt;socks5, balancer, multiple in-campus servers for acceleration, speed *= number of servers</p><h4 id="fallback">fallback</h4><p>alexkirsz/dispatch-proxy: LAN + WLAN + USB LAN + USB hotspot: speed *= 4</p><h3 id="reverse-proxy-ip-without-server-port-access">reverse proxy ip without server port access</h3><p>v2fly/v2ray-core: reverse proxy</p><p>vscode: temperary port forwarding</p><h3 id="LAN-traversal-with-server-root-access">LAN traversal with server root access</h3><p>ntop/n2n</p><h2 id="notes">notes</h2><ul><li>campus LAN should be seen as public with even more strict censorship but less decryption ability, never use unencrypted proxy in campus LAN</li><li>watch out for DNS leak, use firewall rules to block port 53 if necessary</li><li>if necessary use firewall rules to block all connections except localhost proxy</li></ul>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/misc/">Misc</category>
+      
+      
+      
+      <comments>http://www.mkmark.net/blog/misc/proxy-summary/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>rss news</title>
@@ -609,32 +638,6 @@ resolution of 0.8m&lt;br&gt;
       
       
       <comments>http://www.mkmark.net/blog/travel/chengdu-trip/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>The Complexity of Humanity</title>
-      <link>http://www.mkmark.net/blog/learn/the-complexity-of-humanity/</link>
-      <guid>http://www.mkmark.net/blog/learn/the-complexity-of-humanity/</guid>
-      <pubDate>Tue, 27 Jul 2021 20:46:00 GMT</pubDate>
-      
-      <description>&lt;blockquote&gt;
-&lt;p&gt;Everyone knows &amp;quot;complicated&amp;quot; is code for &amp;quot;bitch.&amp;quot;&lt;br&gt;
--Gone Girl (2014)&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<blockquote><p>Everyone knows &quot;complicated&quot; is code for &quot;bitch.&quot;<br>-Gone Girl (2014)</p></blockquote><a id="more"></a><h2 id="Methods">Methods</h2><p>I was trying to classify and model all my good relationship, so I began to look into my friends, their interest, outlook, and personality.</p><p>The first model I bumped into was Myers-Briggs Type Indicator, MBTI. It's a really popular model. I soon discovered it has problem that the model itself is not reasonable as it labelled a lot of personality as incompatible, which is not, like thinking and feeling. IQ and EQ are definitely not contradictory to each other, and mostly often, positively correlated.</p><p>So I did some research and looked into the wikipedia page which lists a lot of psychology models.</p><p>I did not came up with any satisfactory model that is mature enough.</p><p>IMHO a good model, would be listing personality traits as features as independent as possible. For sure there will still be correlations, and it would be a tough work to solve for the coefficients, while distinguishing between those important features and others.</p><p>In the end I decide I should take a different approach. I found the <a href="https://github.com/nucular/mmpi-2">MMPI-2 questionnaire</a> and went on with a more empirical method, by simply trying to understand my target according their existing reaction under certain situation, without the abstraction of personality traits.</p><h2 id="Thoughts">Thoughts</h2><p>Concealed, as you would expect if you think alike.</p>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/learn/">Learn</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/psychology/">psychology</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/learn/the-complexity-of-humanity/#disqus_thread</comments>
       
     </item>
     

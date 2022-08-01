@@ -9,8 +9,60 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 21 Jun 2022 05:52:05 GMT</pubDate>
+    <pubDate>Mon, 01 Aug 2022 06:23:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Asymmetric routing and campus firewall</title>
+      <link>http://www.mkmark.net/blog/work/asymmetric-routing-and-campus-firewall/</link>
+      <guid>http://www.mkmark.net/blog/work/asymmetric-routing-and-campus-firewall/</guid>
+      <pubDate>Mon, 01 Aug 2022 05:51:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;Despite Zhejiang University having a clear university-wide &lt;a href=&quot;https://itc.zju.edu.cn/12090/list.htm&quot; title=&quot;policy&quot;&gt;policy&lt;/a&gt; on d</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>Despite Zhejiang University having a clear university-wide <a href="https://itc.zju.edu.cn/12090/list.htm" title="policy">policy</a> on domain registration, a Haining campus Information Technology Services officer Hejia Zhang told me the campus has its own policy that refuses to follow due to 'security concern'. In other words, the Haining campus refuses to assist with University domain reverse proxy, such that any user who wants to have an Internet-accessible server will have to have its server located elsewhere. In my situation, it means an extra ￥2200/year cost to rent a VPS from ZJU main campus.</p><p>The actual scenario is, the Haining campus has internal connections with other ZJU campuses. In my situation, with the service still deployed on a local server, with a forwarded proxy from main campus VPS, any security breach would still happen locally, meaning the 'security concern' is nothing but a poorly made excuse.</p><p>Well, since the administrative board is not responsible for users in a typical Chinese-style organization, I will have to fix this issue by myself.</p><p>Interestingly, the reverse proxy can be actually configured from the main campus alone, and it should work without problem. So I circumvent the Haining campus ITS and registered a domain reverse proxy directly with the main campus.</p><p>The result is, strange. I noticed the server is indeed Internet accessible when applying for an HTTPS certificate, but local tests show that it can not be accessed from within China. In other words, it is accessible only from abroad.</p><p>I spent an entire afternoon trying to figure out why, and with hints from the main campus IT support and traceroute output, I finally discovered that the problem lies in asymmetric routing.</p><p>More detailly, all outgoing traffic from the Haining campus is redirected according to its destination. Traffic going abroad is going through the main campus exit, while others directly through the local campus exit. Now since the incoming traffic is all from the main campus entrance, this path is symmetrically routed, and the other one is not. The asymmetric routing will be blocked by the firewall due to DDOS attack prevention.</p><p>A ticket is then sent to the Haining campus to request all outgoing traffic to go through the main campus network. Now that this is an existed routing, they accepted. Problem solved.</p>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/work/">Work</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/network/">network</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/work/asymmetric-routing-and-campus-firewall/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Reveal all HSAP without &#39;modified&#39; tag</title>
+      <link>http://www.mkmark.net/blog/game/reveal-all-hsap-without-modified-tag/</link>
+      <guid>http://www.mkmark.net/blog/game/reveal-all-hsap-without-modified-tag/</guid>
+      <pubDate>Mon, 04 Jul 2022 14:38:00 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;This is a log rather than a tutorial. It does one very specific thing, to reveal all HSAPs without getting &#39;modified&#39; tag. Though I think</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>This is a log rather than a tutorial. It does one very specific thing, to reveal all HSAPs without getting 'modified' tag. Though I think the method of injecting/calling script without modified tag is worth sharing.</p><h2 id="Senario">Senario</h2><p>I have my HQ deployed at <code>Unclaimed Sector</code> behind <code>Xenon Secot 524</code>. So When I learned there could be a <code>Unclaimed Sector beta</code> but it's not in my game due to some game start randomness I try to bring it back without losing my game progress or getting a 'modified' tag.</p><h2 id="Tools">Tools</h2><ul><li><a href="https://docs.google.com/document/d/1atdLILlMxCPgK1C6_Hksel4siwBFgtObtaDo2fxbkJk/view?pli=1#heading=h.9m4agj1ilk19">Unmodifier</a> + Win 7</li></ul><h2 id="Procedure">Procedure</h2><ul><li>write a script <code>z.cheat.mkmark.revealall.hsap.xml</code> to reveal all HSAPs based on cycrow's revealall cheat script, and add a fake signiture</li><li>extract <code>plugin.turbo.hotkey.xml</code> from corresponding pck file, backup the pck, then replace the pck by a modified xml where <code>z.cheat.mkmark.revealall.hsap</code> are replaced by <code>plugin.turbo.activate</code></li><li>follow the 'Unmodifier' instruction to launch a game</li><li>activate turbo boost in game</li></ul><p>the plain script of <code>z.cheat.mkmark.revealall.hsap.xml</code></p><pre class="language-sh" data-language="sh"><code class="language-sh">$main.universe &#x3D; get global variable: name&#x3D;&#39;main.universe&#39;skip if $main.universe -&gt; exists  $main.universe &#x3D; get sector from universe index: x&#x3D;0, y&#x3D;0skip if $main.universe -&gt; exists  $main.universe &#x3D; [PLAYERSHIP] -&gt; get sector$x &#x3D; get max sectors in x directionwhile $x  $y &#x3D; get max sectors in y direction  dec $x &#x3D;  while $y    dec $y &#x3D;    $sector &#x3D; get sector from universe index: x&#x3D;$x, y&#x3D;$y    skip if $sector -&gt; exists      continue    $flags &#x3D; [Find.ExcludeTerranGates] | [Find.ExcludeGates] | [Find.Hyperspeed]    $hsap &#x3D; find gate: flags&#x3D;$flags, refobj&#x3D;$sector, max dist&#x3D;null, refpos&#x3D;null    if $hsap -&gt; exists      if $hsap -&gt;is hyperspeed access point        if not $hsap -&gt;is hsap discoverable          if is valid route between sectors $main.universe and $sector            $hsap -&gt; set hsap discoverable [TRUE]          end        end      end    end  endendreturn null</code></pre><h2 id="Reference">Reference</h2><ul><li>https://forum.egosoft.com/viewtopic.php?t=436933&amp;start=15#p5068731 (I generally followed Cheese's method but fixed the bug of extra missions)</li></ul>]]></content:encoded>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-category/game/">Game</category>
+      
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/x3/">X3</category>
+      
+      
+      <comments>http://www.mkmark.net/blog/game/reveal-all-hsap-without-modified-tag/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Raspberry Pi libcamera low-latency http streaming</title>
@@ -34,6 +86,10 @@
       
       <category domain="http://www.mkmark.net/archive/by-category/solution/">Solution</category>
       
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/linux/">Linux</category>
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/raspberry-pi/">Raspberry Pi</category>
       
       
       <comments>http://www.mkmark.net/blog/solution/raspberry-pi-libcamera-low-latency-http-streaming/#disqus_thread</comments>
@@ -60,6 +116,8 @@
       <category domain="http://www.mkmark.net/archive/by-category/solution/">Solution</category>
       
       
+      <category domain="http://www.mkmark.net/archive/by-tag/network/">network</category>
+      
       
       <comments>http://www.mkmark.net/blog/solution/campus-network-exploitation/#disqus_thread</comments>
       
@@ -84,6 +142,8 @@
       <category domain="http://www.mkmark.net/archive/by-category/solution/">Solution</category>
       
       
+      <category domain="http://www.mkmark.net/archive/by-tag/network/">network</category>
+      
       
       <comments>http://www.mkmark.net/blog/solution/backup-and-synchronization-summary/#disqus_thread</comments>
       
@@ -107,6 +167,8 @@
       
       <category domain="http://www.mkmark.net/archive/by-category/solution/">Solution</category>
       
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/network/">network</category>
       
       
       <comments>http://www.mkmark.net/blog/solution/proxy-summary/#disqus_thread</comments>
@@ -321,11 +383,11 @@
       <category domain="http://www.mkmark.net/archive/by-category/misc/">Misc</category>
       
       
+      <category domain="http://www.mkmark.net/archive/by-tag/society/">society</category>
+      
       <category domain="http://www.mkmark.net/archive/by-tag/psychology/">psychology</category>
       
       <category domain="http://www.mkmark.net/archive/by-tag/philosophy/">philosophy</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/society/">society</category>
       
       
       <comments>http://www.mkmark.net/blog/misc/autarky/#disqus_thread</comments>
@@ -374,6 +436,8 @@
       
       <category domain="http://www.mkmark.net/archive/by-category/work/">Work</category>
       
+      
+      <category domain="http://www.mkmark.net/archive/by-tag/civil-engineering/">civil engineering</category>
       
       
       <comments>http://www.mkmark.net/blog/work/project-golden-horizon/#disqus_thread</comments>
@@ -454,6 +518,8 @@
       <category domain="http://www.mkmark.net/archive/by-category/misc/">Misc</category>
       
       
+      <category domain="http://www.mkmark.net/archive/by-tag/network/">network</category>
+      
       
       <comments>http://www.mkmark.net/blog/misc/zhejiang-university-network/#disqus_thread</comments>
       
@@ -520,102 +586,6 @@
       
       
       <comments>http://www.mkmark.net/blog/work/project-newlink-group-carbon-assessment-report-2021/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Project: Terrain Modelling</title>
-      <link>http://www.mkmark.net/blog/solution/project-terrain-modelling/</link>
-      <guid>http://www.mkmark.net/blog/solution/project-terrain-modelling/</guid>
-      <pubDate>Mon, 06 Sep 2021 15:58:00 GMT</pubDate>
-      
-      <description>&lt;p&gt;This is a sub project of the ongoing project: &lt;a href=&quot;/blog/work/project-golden-horizon/&quot;&gt;Hengjin Villiage Plan&lt;/a&gt;.&lt;/p&gt;
-&lt;h1&gt;Terrain Model Report&lt;/h1&gt;
-&lt;h2 id=&quot;DEM-data-source&quot;&gt;DEM data source&lt;/h2&gt;
-&lt;h3 id=&quot;GoogleEarth-RenderDoc-Blender&quot;&gt;GoogleEarth - RenderDoc - Blender&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://earth.google.com/web/search/Zhejiang,+Ningbo,+Ninghai+County,+%e6%a8%aa%e9%87%91%e6%9d%91/@29.33703766,121.48147217,179.7368143a,3381.49344812d,35y,-0h,0t,0r/data=CpYBGmwSZgolMHgzNDRkZjNhYzJiYmQ1ODYxOjB4NTllZmE2Yjg5MjhmZDI1NxmTNeohGlU9QCFQ-dfyyl9eQCorWmhlamlhbmcsIE5pbmdibywgTmluZ2hhaSBDb3VudHksIOaoqumHkeadkRgBIAEiJgokCb9pKcQ9ZT1AEeUdNtsSwTxAGf29YLA_al5AIfgcJNhIPF5A&quot;&gt;earth.google.com&lt;/a&gt;&lt;br&gt;
-not seamless, unable to use&lt;/p&gt;
-&lt;h3 id=&quot;SketchUp-Digital-Globe&quot;&gt;SketchUp - Digital Globe&lt;/h3&gt;
-&lt;p&gt;low resolution&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/content/uploads/merged_mesh_contour_500.png&quot; alt=&quot;picture 1&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Dataset-ASTGTMV003-N29E121&quot;&gt;Dataset: ASTGTMV003_N29E121&lt;/h3&gt;
-&lt;p&gt;DOI 10.5067/ASTER/ASTGTM.003&lt;br&gt;
-&lt;a href=&quot;https://search.earthdata.nasa.gov/search/granules/granule-details?p=C1711961296-LPCLOUD&amp;amp;pg%5B0%5D%5Bv%5D=f&amp;amp;pg%5B0%5D%5Bgsk%5D=-start_date&amp;amp;g=G1726749481-LPCLOUD&amp;amp;sp%5B0%5D=121.48139%2C29.25113&amp;amp;tl=1630845114.302!3!!&amp;amp;m=29.207652643607364!120.21240234375001!7!1!0!0%2C2&quot;&gt;earthdata&lt;/a&gt;&lt;br&gt;
-2000-03-01 00:00:00 - 2013-11-30 23:59:59&lt;br&gt;
-resolution of 1 arc second (approximately 30 meter horizontal posting at the equator)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/content/uploads/ASTGTMV003_N29E121_dem_contour_500.png&quot; alt=&quot;picture 2&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Dataset-ALPSRP133840570-RTC-HI-RES&quot;&gt;Dataset: ALPSRP133840570-RTC_HI_RES&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://search.asf.alaska.edu/#/?zoom=8.543%C2%A2er=121.186,28.158&amp;amp;polygon=POLYGON((121.471%2029.3287,121.4988%2029.3287,121.4988%2029.342,121.471%2029.342,121.471%2029.3287))&amp;amp;resultsLoaded=true&amp;amp;granule=ALPSRP133840570-RTC_LOW_RES&amp;amp;dataset=ALOS&amp;amp;productTypes=RTC_LOW_RES,RTC_HI_RES&quot;&gt;alaska.edu&lt;/a&gt;&lt;br&gt;
-&lt;a href=&quot;https://search.earthdata.nasa.gov/search/granules?p=C1206487504-ASF&amp;amp;pg%5B0%5D%5Bv%5D=f&amp;amp;pg%5B0%5D%5Bgsk%5D=-start_date&amp;amp;q=alos%20palsar&amp;amp;sp%5B0%5D=121.48139%2C29.25113&amp;amp;tl=1630845114!3!!&quot;&gt;earthdata&lt;/a&gt;&lt;br&gt;
-2008-07-29 14:21:47 - 2008-07-29 14:21:55&lt;br&gt;
-resolution of 12m&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/content/uploads/AP_13384_FBD_F0570_RT1_dem_contour_500.png&quot; alt=&quot;picture 3&quot;&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Satalite-TerraSAR-X&quot;&gt;Satalite: TerraSAR-X&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://tpm-ds.eo.esa.int/smcat/TerraSAR-X/2/10/53/&quot;&gt;esa.int&lt;/a&gt;&lt;br&gt;
-region not found&lt;/p&gt;
-&lt;h2 id=&quot;image-data-source&quot;&gt;image data source&lt;/h2&gt;
-&lt;h3 id=&quot;SketchUp-Digital-Globe-2&quot;&gt;SketchUp - Digital Globe&lt;/h3&gt;
-&lt;p&gt;Photoshop: remove excessive water print, and additional drawing&lt;br&gt;
-Illustrator: vectorization&lt;br&gt;
-caffe: scale up resolution&lt;/p&gt;
-&lt;h3 id=&quot;Satalite-Worldview-3&quot;&gt;Satalite: Worldview-3&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://earth.esa.int/eogateway/catalog/worldview-3-full-archive-and-tasking?sortby=NEWEST_FIRST&quot;&gt;esa.int&lt;/a&gt;&lt;br&gt;
-resolution of 0.3m&lt;br&gt;
-proposal required, need waiting within 14 days&lt;br&gt;
-owned by digital globe so potentially we may have already get it&lt;/p&gt;
-&lt;h3 id=&quot;Satalite-高分二号&quot;&gt;Satalite: 高分二号&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.resdc.cn/data.aspx?DATAID=214&quot;&gt;resdc.cn&lt;/a&gt;&lt;br&gt;
-resolution of 0.8m&lt;br&gt;
-要钱&lt;br&gt;
-分辨率不如Worldview-3&lt;/p&gt;</description>
-      
-      
-      
-      <content:encoded><![CDATA[<p>This is a sub project of the ongoing project: <a href="/blog/work/project-golden-horizon/">Hengjin Villiage Plan</a>.</p><h1>Terrain Model Report</h1><h2 id="DEM-data-source">DEM data source</h2><h3 id="GoogleEarth-RenderDoc-Blender">GoogleEarth - RenderDoc - Blender</h3><p><a href="https://earth.google.com/web/search/Zhejiang,+Ningbo,+Ninghai+County,+%e6%a8%aa%e9%87%91%e6%9d%91/@29.33703766,121.48147217,179.7368143a,3381.49344812d,35y,-0h,0t,0r/data=CpYBGmwSZgolMHgzNDRkZjNhYzJiYmQ1ODYxOjB4NTllZmE2Yjg5MjhmZDI1NxmTNeohGlU9QCFQ-dfyyl9eQCorWmhlamlhbmcsIE5pbmdibywgTmluZ2hhaSBDb3VudHksIOaoqumHkeadkRgBIAEiJgokCb9pKcQ9ZT1AEeUdNtsSwTxAGf29YLA_al5AIfgcJNhIPF5A">earth.google.com</a><br>not seamless, unable to use</p><h3 id="SketchUp-Digital-Globe">SketchUp - Digital Globe</h3><p>low resolution</p><p><img src="/content/uploads/merged_mesh_contour_500.png" alt="picture 1"></p><h3 id="Dataset-ASTGTMV003-N29E121">Dataset: ASTGTMV003_N29E121</h3><p>DOI 10.5067/ASTER/ASTGTM.003<br><a href="https://search.earthdata.nasa.gov/search/granules/granule-details?p=C1711961296-LPCLOUD&amp;pg%5B0%5D%5Bv%5D=f&amp;pg%5B0%5D%5Bgsk%5D=-start_date&amp;g=G1726749481-LPCLOUD&amp;sp%5B0%5D=121.48139%2C29.25113&amp;tl=1630845114.302!3!!&amp;m=29.207652643607364!120.21240234375001!7!1!0!0%2C2">earthdata</a><br>2000-03-01 00:00:00 - 2013-11-30 23:59:59<br>resolution of 1 arc second (approximately 30 meter horizontal posting at the equator)</p><p><img src="/content/uploads/ASTGTMV003_N29E121_dem_contour_500.png" alt="picture 2"></p><h3 id="Dataset-ALPSRP133840570-RTC-HI-RES">Dataset: ALPSRP133840570-RTC_HI_RES</h3><p><a href="https://search.asf.alaska.edu/#/?zoom=8.543%C2%A2er=121.186,28.158&amp;polygon=POLYGON((121.471%2029.3287,121.4988%2029.3287,121.4988%2029.342,121.471%2029.342,121.471%2029.3287))&amp;resultsLoaded=true&amp;granule=ALPSRP133840570-RTC_LOW_RES&amp;dataset=ALOS&amp;productTypes=RTC_LOW_RES,RTC_HI_RES">alaska.edu</a><br><a href="https://search.earthdata.nasa.gov/search/granules?p=C1206487504-ASF&amp;pg%5B0%5D%5Bv%5D=f&amp;pg%5B0%5D%5Bgsk%5D=-start_date&amp;q=alos%20palsar&amp;sp%5B0%5D=121.48139%2C29.25113&amp;tl=1630845114!3!!">earthdata</a><br>2008-07-29 14:21:47 - 2008-07-29 14:21:55<br>resolution of 12m</p><p><img src="/content/uploads/AP_13384_FBD_F0570_RT1_dem_contour_500.png" alt="picture 3"></p><h3 id="Satalite-TerraSAR-X">Satalite: TerraSAR-X</h3><p><a href="https://tpm-ds.eo.esa.int/smcat/TerraSAR-X/2/10/53/">esa.int</a><br>region not found</p><h2 id="image-data-source">image data source</h2><h3 id="SketchUp-Digital-Globe-2">SketchUp - Digital Globe</h3><p>Photoshop: remove excessive water print, and additional drawing<br>Illustrator: vectorization<br>caffe: scale up resolution</p><h3 id="Satalite-Worldview-3">Satalite: Worldview-3</h3><p><a href="https://earth.esa.int/eogateway/catalog/worldview-3-full-archive-and-tasking?sortby=NEWEST_FIRST">esa.int</a><br>resolution of 0.3m<br>proposal required, need waiting within 14 days<br>owned by digital globe so potentially we may have already get it</p><h3 id="Satalite-高分二号">Satalite: 高分二号</h3><p><a href="https://www.resdc.cn/data.aspx?DATAID=214">resdc.cn</a><br>resolution of 0.8m<br>要钱<br>分辨率不如Worldview-3</p><a id="more"></a><h2 id="Reference">Reference</h2><p>EarthExplorer<br>https://earthexplorer.usgs.gov/</p><p>29.34°N 121.49°E | Zoom Earth<br>https://zoom.earth/#view=29.335552,121.487199,17z</p><p>digital elevation model commercial high resolution - Google Search<br>https://www.google.com.hk/search?q=digital+elevation+model+commercial+high+resolution&amp;newwindow=1&amp;sxsrf=AOaemvJZai9EFtmZY9AR-nwIy6eerUCOSg%3A1630848121593&amp;ei=ecQ0YbG2I9j9-gSl3pfIDA&amp;oq=digital+elevation+model+commercial+high+res&amp;gs_lcp=Cgdnd3Mtd2l6EAMYADIICCEQFhAdEB46BwgAEEcQsAM6BQgAEM0CSgQIQRgAUM8mWJYyYPQ3aAFwAngAgAG9AogBoxSSAQUyLTguMZgBAKABAcgBCMABAQ&amp;sclient=gws-wiz</p><p>Digital elevation model - Wikipedia<br>https://en.wikipedia.org/wiki/Digital_elevation_model</p><p>ALOS dem buy - Google Search<br>https://www.google.com.hk/search?q=ALOS+dem+buy&amp;newwindow=1&amp;biw=1920&amp;bih=880&amp;sxsrf=AOaemvKJqp7hyVluwTrlcuuAfEYPPDBivQ%3A1630848278878&amp;ei=FsU0Yaz9NIbn-gSorLfIDA&amp;oq=ALOS+dem+buy&amp;gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABMgUIIRCrAjIFCCEQqwIyBQghEKsCOgcIABBHELADOgcIABCwAxBDOgUIABCABDoKCAAQgAQQhwIQFDoFCAAQywFKBAhBGABQqbgBWIy9AWCwvwFoAXACeACAAcgCiAGxB5IBBTItMS4ymAEAoAEByAEJwAEB&amp;sclient=gws-wiz&amp;ved=0ahUKEwis4OCi9-fyAhWGs54KHSjWDckQ4dUDCA8&amp;uact=5</p><p>ALOS Global Digital Surface Model &quot;ALOS World 3D - 30m&quot; (AW3D30)<br>https://www.eorc.jaxa.jp/ALOS/en/aw3d30/index.htm</p><p>Buy AW3D Standard DEMs - Apollo Mapping | The Image Hunters<br>https://apollomapping.com/digital-elevation-models/aw3d-standard-dem</p><p>5m DTM<br>https://shop.geospatial.com/product/07-WDAN-153</p><p>OpenDEM<br>https://www.opendem.info/opendemsearcher.html</p><p>EarthCache - Request thank you — SkyWatch<br>https://www.skywatch.com/earthcache/thank-you?submissionGuid=7761b33c-3c07-4e06-b961-95edb4f5259b</p><p>SkyWatch - Commercial Satellite Imagery Made Accessible<br>https://www.skywatch.com/</p><p>Top 9 free sources of satellite data [2021 update] — SkyWatch<br>https://www.skywatch.com/blog/free-sources-of-satellite-data</p><p>5M DTM download - Google Search<br>https://www.google.com.hk/search?q=5M+DTM+download&amp;newwindow=1&amp;biw=1920&amp;bih=880&amp;sxsrf=AOaemvKK7AMHsdwC2BgbRCg1pGOm5WJzMQ%3A1630848410718&amp;ei=msU0YbGVK4Lf-wSl4ZXIDA&amp;oq=5M+DTM+download&amp;gs_lcp=Cgdnd3Mtd2l6EAM6BggAEBYQHjoFCCEQqwJKBAhBGABQ9PIVWNiKFmDbixZoAHACeAGAAekJiAG8HpIBCzItNC4yLjYtMS4xmAEAoAECoAEBwAEB&amp;sclient=gws-wiz&amp;ved=0ahUKEwixys_h9-fyAhWC754KHaVwBckQ4dUDCA8&amp;uact=5</p><p>DEM, DSM &amp; DTM Differences - A Look at Elevation Models in GIS - GIS Geography<br>https://gisgeography.com/dem-dsm-dtm-differences/</p><p>DEM_淘宝搜索<br>https://s.taobao.com/search?q=DEM&amp;imgfile=&amp;commend=all&amp;ssid=s5-e&amp;search_type=item&amp;sourceId=tb.index&amp;spm=a21bo.21814703.201856-taobao-item.1&amp;ie=utf8&amp;initiative_id=tbindexz_20170306</p><p>landsat、MODIS、哨兵、灯光数据、DEM、遥感卫星数据代下载-淘宝网<br>https://item.taobao.com/item.htm?spm=a230r.1.14.28.40311b14WJhsI2&amp;id=615012912193&amp;ns=1&amp;abbucket=13#detail</p><p>5米DEM高程数据和12、30、90米DEM 全球DEM高程数据全国都有-淘宝网<br>https://item.taobao.com/item.htm?spm=a230r.1.14.51.40311b14WJhsI2&amp;id=636716772167&amp;ns=1&amp;abbucket=13#detail</p><p>landsat、MODIS、哨兵、灯光数据、DEM、遥感卫星数据代下载-淘宝网<br>https://item.taobao.com/item.htm?spm=a230r.1.14.30.40311b14WJhsI2&amp;id=615012912193&amp;ns=1&amp;abbucket=13#detail</p><p>alos dem download - Google Search<br>https://www.google.com.hk/search?q=alos+dem+download&amp;newwindow=1&amp;sxsrf=AOaemvLT4qDheUSzyDfGE_RezS3bzwjhRQ%3A1630849057632&amp;ei=Icg0YYH_JY7S-wSHu6TIDA&amp;oq=alos+dem+down&amp;gs_lcp=Cgdnd3Mtd2l6EAMYADIFCAAQgAQyBggAEBYQHjIGCAAQFhAeMgYIABAWEB46BAgjECc6BQgAEJECOgoILhDHARDRAxBDOgQIABBDOgcILhCxAxBDOgcIABCxAxBDOggIABCABBCxAzoLCC4QgAQQxwEQrwE6BwguEIAEEAo6BwgAEIAEEAo6BQguEIAEOgUIABDLAToKCAAQgAQQhwIQFEoECEEYAFD15gdYi4EIYMKLCGgAcAJ4AYAB6gSIAbsekgEJMi03LjQuMC4xmAEAoAEBwAEB&amp;sclient=gws-wiz</p><p>Downloading 12.5 m ALOS PALSAR High-Resolution DEM - The Geo-ICT Blog<br>https://thegeoict.com/blog/2019/10/28/downloading-12-5-m-alos-palsar-high-resolution-dem/</p><p>ALOS PALSAR - Google Search<br>https://www.google.com.hk/search?q=ALOS+PALSAR&amp;oq=ALOS+PALSAR&amp;aqs=chrome..69i57j69i60l2&amp;sourceid=chrome&amp;ie=UTF-8</p><p>About ALOS - PALSAR<br>https://www.eorc.jaxa.jp/ALOS/en/about/palsar.htm</p><p>ALOS PALSAR – ASF<br>https://asf.alaska.edu/data-sets/sar-data-sets/alos-palsar/</p><p>Get Started – ASF<br>https://asf.alaska.edu/how-to/get-started/#view_sar_data</p><p>ASF Data Search<br>https://search.asf.alaska.edu/#/?polygon=POLYGON((121.471%2029.3287,121.4988%2029.3287,121.4988%2029.342,121.471%2029.342,121.471%2029.3287))&amp;productTypes=GRD_HD&amp;resultsLoaded=true&amp;granule=S1A_IW_GRDH_1SDV_20210829T095437_20210829T095502_039443_04A8E8_FE3A-GRD_HD</p><p>ASF Data Search<br>https://search.asf.alaska.edu/#/?zoom=8.543¢er=121.186,28.158&amp;polygon=POLYGON((121.471%2029.3287,121.4988%2029.3287,121.4988%2029.342,121.471%2029.342,121.471%2029.3287))&amp;resultsLoaded=true&amp;granule=ALPSRP133840570-RTC_LOW_RES&amp;dataset=ALOS&amp;productTypes=RTC_LOW_RES,RTC_HI_RES</p><p>AP_13384_FBD_F0570_RT1.geo.jpg (999×884)<br>https://unzip.asf.alaska.edu/RTC_HI_RES/A3/AP_13384_FBD_F0570_RT1.zip/AP_13384_FBD_F0570_RT1/AP_13384_FBD_F0570_RT1.geo.jpg</p><p>Dataset Homepage<br>https://www.eorc.jaxa.jp/ALOS/en/dataset/dataset_index.htm</p><p>TerraSAR-X ESA archive - Earth Online<br>https://earth.esa.int/eogateway/catalog/terrasar-x-esa-archive</p><p>ESA TPM Catalogue - Search map for collection 'TerraSAR-X'<br>https://tpm-ds.eo.esa.int/smcat/TerraSAR-X/2/10/53/</p>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/solution/">Solution</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/grasshopper/">Grasshopper</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/python/">Python</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/rhino/">Rhino</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/sketchup/">SketchUp</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/solution/project-terrain-modelling/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Project: X3-notoriety-hack</title>
-      <link>http://www.mkmark.net/blog/game/project-x3-notoriety-hack/</link>
-      <guid>http://www.mkmark.net/blog/game/project-x3-notoriety-hack/</guid>
-      <pubDate>Fri, 03 Sep 2021 13:17:00 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/mkmark/X3-notoriety-hack&quot;&gt;mkmark/X3-notoriety-hack&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&quot;https://raw.githubusercontent.com/mkmark/</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p><a href="https://github.com/mkmark/X3-notoriety-hack">mkmark/X3-notoriety-hack</a></p><div id="https://raw.githubusercontent.com/mkmark/X3-notoriety-hack/main/README.md"></div><script type="text/javascript">parseMd("https://raw.githubusercontent.com/mkmark/X3-notoriety-hack/main/README.md")</script>]]></content:encoded>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-category/game/">Game</category>
-      
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/x3/">X3</category>
-      
-      <category domain="http://www.mkmark.net/archive/by-tag/lua/">Lua</category>
-      
-      
-      <comments>http://www.mkmark.net/blog/game/project-x3-notoriety-hack/#disqus_thread</comments>
       
     </item>
     

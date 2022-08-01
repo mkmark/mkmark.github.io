@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="manifest" href="/site.webmanifest"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-175297541-1"></script><title>Reveal all HSAP without &#39;modified&#39; tag</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"><link rel="stylesheet" href="/content/css/styles.css?v=202204182224"><script src="/content/js/header.js?v=202102080708"></script><link rel="alternate" href="/atom.xml" title="Mark Ma's Blog" type="application/atom+xml"><link rel="alternate" href="/rss2.xml" title="Mark Ma's Blog" type="application/rss+xml"></head><body onclick=""><div class="sidebar" id="sidebar" onclick=""><div class="sidebar-item"><h1 style="margin-top:1.6em">Mark Ma&#39;s Blog</h1></div><nav class="sidebar-nav"><a class="sidebar-nav-item" href="/">About</a> <a class="sidebar-nav-item" href="/blog/">Blog</a> <a class="sidebar-nav-item" href="/archive/by-date/">　by Date</a> <a class="sidebar-nav-item" href="/archive/by-category/">　by Category</a> <a class="sidebar-nav-item" href="/archive/by-tag/">　by Tag</a> <a class="sidebar-nav-item" href="/portfolio/">Portfolio</a> <a class="sidebar-nav-item" href="/archive/by-tag/civil-engineering/">　Civil Engineering</a> <a class="sidebar-nav-item" href="/portfolio/graphic-design/">　Graphic Design</a> <a class="sidebar-nav-item" href="/portfolio/video-composition/">　Video Composition</a> <a class="sidebar-nav-item" href="/portfolio/web-design/">　Web Design</a><div class="sidebar-nav-item" onclick="switchColorMode()" style="cursor:pointer">Dark Mode</div></nav><div class="sidebar-item" style="font-size:.85em"><p><a href="/privacy-policy/">Privacy Policy</a></p><p>&copy; 2017-2022. All rights reserved.</p></div></div><div class="markdown-body"><article id="post-md/2022-07-04-reveal-all-hsap-without-&#39;modified&#39;-tag" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting"><div class="article-inner"><header class="article-header"><h1 class="p-name article-title" itemprop="headline name">Reveal all HSAP without &#39;modified&#39; tag</h1></header><p class="post-meta"><time class="dt-published" datetime="2022-07-04T14:38:00+00:00" itemprop="datePublished">2022-07-04</time></p><div class="e-content article-entry" itemprop="articleBody"><p>This is a log rather than a tutorial. It does one very specific thing, to reveal all HSAPs without getting 'modified' tag. Though I think the method of injecting/calling script without modified tag is worth sharing.</p><h2 id="Senario">Senario</h2><p>I have my HQ deployed at <code>Unclaimed Sector</code> behind <code>Xenon Secot 524</code>. So When I learned there could be a <code>Unclaimed Sector beta</code> but it's not in my game due to some game start randomness I try to bring it back without losing my game progress or getting a 'modified' tag.</p><h2 id="Tools">Tools</h2><ul><li><a target="_blank" rel="noopener" href="https://docs.google.com/document/d/1atdLILlMxCPgK1C6_Hksel4siwBFgtObtaDo2fxbkJk/view?pli=1#heading=h.9m4agj1ilk19">Unmodifier</a> + Win 7</li></ul><h2 id="Procedure">Procedure</h2><ul><li>write a script <code>z.cheat.mkmark.revealall.hsap.xml</code> to reveal all HSAPs based on cycrow's revealall cheat script, and add a fake signiture</li><li>extract <code>plugin.turbo.hotkey.xml</code> from corresponding pck file, backup the pck, then replace the pck by a modified xml where <code>z.cheat.mkmark.revealall.hsap</code> are replaced by <code>plugin.turbo.activate</code></li><li>follow the 'Unmodifier' instruction to launch a game</li><li>activate turbo boost in game</li></ul><p>the plain script of <code>z.cheat.mkmark.revealall.hsap.xml</code></p><pre class="language-sh" data-language="sh"><code class="language-sh">$main.universe &#x3D; get global variable: name&#x3D;&#39;main.universe&#39;
+skip if $main.universe -&gt; exists
+  $main.universe &#x3D; get sector from universe index: x&#x3D;0, y&#x3D;0
+skip if $main.universe -&gt; exists
+  $main.universe &#x3D; [PLAYERSHIP] -&gt; get sector
+
+$x &#x3D; get max sectors in x direction
+while $x
+  $y &#x3D; get max sectors in y direction
+  dec $x &#x3D;
+  while $y
+    dec $y &#x3D;
+
+    $sector &#x3D; get sector from universe index: x&#x3D;$x, y&#x3D;$y
+    skip if $sector -&gt; exists
+      continue
+
+    $flags &#x3D; [Find.ExcludeTerranGates] | [Find.ExcludeGates] | [Find.Hyperspeed]
+    $hsap &#x3D; find gate: flags&#x3D;$flags, refobj&#x3D;$sector, max dist&#x3D;null, refpos&#x3D;null
+    if $hsap -&gt; exists
+      if $hsap -&gt;is hyperspeed access point
+        if not $hsap -&gt;is hsap discoverable
+          if is valid route between sectors $main.universe and $sector
+            $hsap -&gt; set hsap discoverable [TRUE]
+          end
+        end
+      end
+    end
+
+  end
+end
+return null</code></pre><h2 id="Reference">Reference</h2><ul><li>https://forum.egosoft.com/viewtopic.php?t=436933&amp;start=15#p5068731 (I generally followed Cheese's method but fixed the bug of extra missions)</li></ul></div></div></article></div><div id="privacy-notice"><div id="privacy-notice-content" class="markdown-body"><div><a id="privacy-notice-dismiss" class="btn"><svg width="18" height="18" viewBox="0 0 18 18" style="fill:currentColor;vertical-align:baseline;margin-top:-.3em;margin-bottom:-.3em"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9 15 4.41z"/></svg></a></div><div>Hover your mouse or tap on the left edge to navigate.<br>Upon dismissing, you acknowledge that you have read and understand our <a href="/privacy-policy/">Privacy Policy</a>.</div></div></div></body><footer><script src="/content/js/footer.js?v=202102080708"></script></footer></html>

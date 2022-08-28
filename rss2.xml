@@ -9,13 +9,13 @@
     <atom:link href="http://www.mkmark.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 28 Aug 2022 05:26:00 GMT</pubDate>
+    <pubDate>Sun, 28 Aug 2022 05:50:44 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>v2ray-configurator</title>
-      <link>http://www.mkmark.net/blog/devlog/v2ray-configurator/</link>
-      <guid>http://www.mkmark.net/blog/devlog/v2ray-configurator/</guid>
+      <link>http://www.mkmark.net/blog/devlog/v2ray-configurator-2/</link>
+      <guid>http://www.mkmark.net/blog/devlog/v2ray-configurator-2/</guid>
       <pubDate>Sun, 28 Aug 2022 04:42:00 GMT</pubDate>
       
         
@@ -35,7 +35,7 @@
       <category domain="http://www.mkmark.net/archive/by-tag/python/">Python</category>
       
       
-      <comments>http://www.mkmark.net/blog/devlog/v2ray-configurator/#disqus_thread</comments>
+      <comments>http://www.mkmark.net/blog/devlog/v2ray-configurator-2/#disqus_thread</comments>
       
     </item>
     
@@ -275,8 +275,8 @@
     
     <item>
       <title>六子吃粉</title>
-      <link>http://www.mkmark.net/blog/misc/%E5%85%AD%E5%AD%90%E5%90%83%E7%B2%89/</link>
-      <guid>http://www.mkmark.net/blog/misc/%E5%85%AD%E5%AD%90%E5%90%83%E7%B2%89/</guid>
+      <link>http://www.mkmark.net/blog/misc/%e5%85%ad%e5%ad%90%e5%90%83%e7%b2%89/</link>
+      <guid>http://www.mkmark.net/blog/misc/%e5%85%ad%e5%ad%90%e5%90%83%e7%b2%89/</guid>
       <pubDate>Thu, 10 Mar 2022 08:17:00 GMT</pubDate>
       
         
@@ -302,14 +302,14 @@
       <category domain="http://www.mkmark.net/archive/by-tag/society/">society</category>
       
       
-      <comments>http://www.mkmark.net/blog/misc/%E5%85%AD%E5%AD%90%E5%90%83%E7%B2%89/#disqus_thread</comments>
+      <comments>http://www.mkmark.net/blog/misc/%e5%85%ad%e5%ad%90%e5%90%83%e7%b2%89/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>乌克兰局势</title>
-      <link>http://www.mkmark.net/blog/misc/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/</link>
-      <guid>http://www.mkmark.net/blog/misc/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/</guid>
+      <link>http://www.mkmark.net/blog/misc/%e4%b9%8c%e5%85%8b%e5%85%b0%e5%b1%80%e5%8a%bf/</link>
+      <guid>http://www.mkmark.net/blog/misc/%e4%b9%8c%e5%85%8b%e5%85%b0%e5%b1%80%e5%8a%bf/</guid>
       <pubDate>Tue, 01 Mar 2022 16:03:00 GMT</pubDate>
       
         
@@ -331,7 +331,7 @@
       <category domain="http://www.mkmark.net/archive/by-tag/politics/">politics</category>
       
       
-      <comments>http://www.mkmark.net/blog/misc/%E4%B9%8C%E5%85%8B%E5%85%B0%E5%B1%80%E5%8A%BF/#disqus_thread</comments>
+      <comments>http://www.mkmark.net/blog/misc/%e4%b9%8c%e5%85%8b%e5%85%b0%e5%b1%80%e5%8a%bf/#disqus_thread</comments>
       
     </item>
     
@@ -503,8 +503,8 @@
     
     <item>
       <title>论仪式感</title>
-      <link>http://www.mkmark.net/blog/misc/%E8%AE%BA%E4%BB%AA%E5%BC%8F%E6%84%9F/</link>
-      <guid>http://www.mkmark.net/blog/misc/%E8%AE%BA%E4%BB%AA%E5%BC%8F%E6%84%9F/</guid>
+      <link>http://www.mkmark.net/blog/misc/%e8%ae%ba%e4%bb%aa%e5%bc%8f%e6%84%9f/</link>
+      <guid>http://www.mkmark.net/blog/misc/%e8%ae%ba%e4%bb%aa%e5%bc%8f%e6%84%9f/</guid>
       <pubDate>Sun, 03 Oct 2021 10:13:00 GMT</pubDate>
       
         
@@ -525,7 +525,7 @@
       <category domain="http://www.mkmark.net/archive/by-tag/philosophy/">philosophy</category>
       
       
-      <comments>http://www.mkmark.net/blog/misc/%E8%AE%BA%E4%BB%AA%E5%BC%8F%E6%84%9F/#disqus_thread</comments>
+      <comments>http://www.mkmark.net/blog/misc/%e8%ae%ba%e4%bb%aa%e5%bc%8f%e6%84%9f/#disqus_thread</comments>
       
     </item>
     
